@@ -1,5 +1,6 @@
 import analysis from "../../public/assets/analysis.png";
 import strategy from "../../public/assets/strategy.png";
+import execution from "../../public/assets/execution.png";
 const Succeed = () => {
   const features = [
     {
@@ -15,7 +16,7 @@ const Succeed = () => {
         "We create custom strategy that includes tactics that have been previously proven and battle tested with outstanding results.",
     },
     {
-      pic: strategy,
+      pic: execution,
       title: "Execution",
       content:
         "We get the work done while collaborating with you and our key alliances & partners to achieve results specific to your unique goals.",
@@ -28,8 +29,7 @@ const Succeed = () => {
         How we Help your Business Succeed
       </h2>
       <h3 className="font-Blinker font-light text-[17px] max-sm:text-center max-sm:mt-3 max-sm:w-80">
-        We bridge the gap between value-focused technology, risk and advisory
-        services
+      We help businesses grow through market fit, smart launch plans, and targeted outreach.
       </h3>
       <div className="flex sm:flex-row gap-x-5 mt-12 max-sm:flex-col max-sm:gap-y-8 max-sm:mt-[70px]">
         {features.map((item, index) => (

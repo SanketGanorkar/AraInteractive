@@ -1,3 +1,8 @@
 Footer :-
 bg-#121C27
 font - comme , blinker
+
+
+To - Do
+- caraousel in services page
+https://calendly.com/ashutosh-armouriq/30min

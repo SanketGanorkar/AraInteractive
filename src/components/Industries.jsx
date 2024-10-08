@@ -23,7 +23,7 @@ const Industries = () => {
     {
       id: 1,
       logo: consumer,
-      title: "Consumer Goods & CPG",
+      title: "Consumer Goods & CPG (Consumer Packaged Goods)",
     },
     { id: 2, logo: energy, title: "Energy and Sustainability" },
     { id: 3, logo: real_estate, title: "Real Estate and PropTech" },
@@ -43,7 +43,7 @@ const Industries = () => {
               <div className="flex flex-col" key={index}>
                 <div className="flex flex-row">
                   <img src={item.logo} alt="" />
-                  <h2 className="font-Blinker font-normal ml-3">
+                  <h2 className="font-Blinker font-normal ml-3 text-[#4C4C4C]">
                     {item.title}
                   </h2>
                 </div>
@@ -60,12 +60,12 @@ const Industries = () => {
               <div className="flex flex-col" key={index}>
                 <div className="flex flex-row">
                   <img src={item.logo} alt="" />
-                  <h2 className="font-Blinker font-normal ml-3">
+                  <h2 className="font-Blinker font-normal ml-3 text-[#4C4C4C]">
                     {item.title}
                   </h2>
                 </div>
                 {item.id != 4 && (
-                  <div className="bg-[#A2A2A2] h-[1px] w-80 mt-2"></div>
+                  <div className="bg-[#A2A2A2] h-[1px] w-[390px] mt-2"></div>
                 )}
               </div>
             ))}

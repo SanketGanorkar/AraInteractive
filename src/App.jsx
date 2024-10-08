@@ -22,7 +22,7 @@ import LandingPage from "./components/LandingPage.jsx";
 function App() {
   return (
     <>
-      <BrowserRouter basename="AraInteractive">
+      <BrowserRouter basename="/AraInteractive">
         <div className="overflow-x-hidden">
           <Scroll />
           <Navbar />

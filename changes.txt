@@ -1,1 +1,2 @@
 routing in blog chud gayi hai , bc dabane pr footer me chale jaa raha , usko theek kr
+lenis for smooth scroll

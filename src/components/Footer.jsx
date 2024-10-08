@@ -87,11 +87,11 @@ const Footer = () => {
                     Quick Links
                   </h1>
                   <div className="text-white font-Blinker font-light pt-3 flex flex-col gap-y-3">
-                    <Link smooth to="/">Home</Link>
-                    <Link smooth to="#about">About us</Link>
-                    <Link smooth to="#services">Services</Link>
-                    <Link smooth to="#clients">Clients</Link>
-                    <Link smooth to="#growth">FAQs</Link>
+                    <Link to="/">Home</Link>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#clients">Clients</a>
+                    <a href="#growth">FAQs</a>
                   </div>
                 </div>
               </div>

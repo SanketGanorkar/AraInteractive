@@ -16,15 +16,15 @@ import Blog3 from "./components/Blogs/Blog3.jsx";
 import Blog4 from "./components/Blogs/Blog4.jsx";
 import Blog5 from "./components/Blogs/Blog5.jsx";
 import Blog6 from "./components/Blogs/Blog6.jsx";
-// import Scroll from "./components/Scroll.jsx"
+import Scroll from "./components/Scroll.jsx"
 import LandingPage from "./components/LandingPage.jsx";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        
+      <BrowserRouter basename="AraInteractive">
         <div className="overflow-x-hidden">
+          <Scroll />
           <Navbar />
           <Routes>
             <Route exact path="/" element={<LandingPage />} />

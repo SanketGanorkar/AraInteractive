@@ -94,7 +94,6 @@ const Blogs = () => {
                   src={item.pic}
                   alt={item.title}
                   className="w-full h-[170px] object-cover max-w-[280px] mx-auto"
-                // onClick={()=> navigate(`/blogs/${item.title}`)}
                 />
               </Link>
               <h1 className="pt-5 font-Blinker font-semibold text-xl text-left">

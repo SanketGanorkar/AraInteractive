@@ -86,22 +86,21 @@
 //         </div>
 //       )}
 //     </div>
-//   );
+
 // };
 
 // export default Navbar;
 import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
-import { useNavigate } from "react-router-dom"; // Import Link for navigation
-import { HashLink as Link } from "react-router-hash-link"
+import {Link , useNavigate} from "react-router-dom"
 import ara from "../../public/assets/Ara.png";
 
 const Navbar = () => {
   const [visibleMenu, setVisibleMenu] = useState(false);
 
   const handleMenuClick = () => {
-    setVisibleMenu(false); // Close menu when clicking an item
+    setVisibleMenu(false);
   };
 
   const navigate = useNavigate();
@@ -127,16 +126,16 @@ const Navbar = () => {
           <ul className="hidden md:flex flex-row gap-x-8 text-white font-Comme font-semibold pt-2">
             <li className="uppercase cursor-pointer">
               {/* <a href="#home">Home</a> */}
-              <Link smooth to="/">Home</Link>
+              <a href="/">Home</a>
             </li>
             <li className="uppercase cursor-pointer">
-              <Link  smooth to="#services">Services</Link>
+              <a href="#services">Services</a>
             </li>
             <li className="uppercase cursor-pointer">
-              <Link smooth to="#about">About us</Link>
+              <a href="#about">About us</a>
             </li>
             <li className="uppercase cursor-pointer">
-              <Link smooth to="#blogs">Blogs</Link>
+              <a href="#blogs">Blogs</a>
             </li>
           </ul>
           <button className="uppercase cursor-pointer bg-white p-2 text-black rounded-xl text-[13px] font-bold mb-1">
@@ -170,11 +169,6 @@ const Navbar = () => {
                 Blogs
               </Link>
             </li>
-            {/* <li className="uppercase cursor-pointer">
-              <Link to="/contact" onClick={handleMenuClick}>
-                Contact Us
-              </Link>
-            </li> */}
           </ul>
         </div>
       )}

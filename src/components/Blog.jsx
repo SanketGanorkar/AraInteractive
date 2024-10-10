@@ -87,7 +87,7 @@ const Blogs = () => {
           {features.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-left p-5 bg-white shadow-lg rounded-lg transition-transform transform hover:shadow-3xl hover:shadow-black mx-4 border border-gray-200 cursor-pointer"
+              className="flex flex-col items-left p-5 bg-white shadow-lg rounded-lg transition-transform transform hover:shadow-3xl hover:shadow-black md:mx-4 border border-gray-200 cursor-pointer"
             >
               <Link to={item.path} className="overflow-hidden">
                 <img

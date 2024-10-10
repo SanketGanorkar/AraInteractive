@@ -185,24 +185,33 @@ const Blog_section = () => {
 
   return (
     <div className="flex flex-col items-center justify-center font-Blinker">
-
       <div className="bg-introbg w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
+        {/* Intro */}
         <div className="flex flex-col justify-center items-start h-full">
-          <h1 className="text-white font-Blinker text-4xl leading-10 font-normal w-[30rem] mr-[38rem]">
-            Reasons Why New Businesses Fail (and How to Prevent Them)
+          <h1 className="text-white font-Blinker text-4xl leading-10 font-normal md:w-[30rem] md:mr-[38rem] max-sm:ml-6">
+            Reasons Why New Businesses Fail
+            <span className="hidden max-sm:inline">
+              <br />
+            </span>
+            (and How to Prevent Them)
           </h1>
-          <div className="flex pt-12">
-            <h2 className="text-white text-xl -mt-1 cursor-pointer" onClick={()=>navigate('/')}>Home</h2>
-            <img src={arrow} alt="arrow" className="w-10 h-6 ml-3" />
-            <h4 className="text-white -mt-1 ml-3 text-xl cursor-pointer" onClick={()=>navigate('/blogs/How to Write a Positioning Statement')}>How to Write a Positioning Statement</h4>
+
+          {/* <h1 className="text-white font-Blinker text-4xl leading-10 font-normal md:w-[30rem] md:mr-[38rem] max-sm:ml-8">
+            Reasons Why New Businesses Fail <br />(and How to Prevent Them)
+          </h1> */}
+
+          <div className="flex pt-12 max-sm:ml-7">
+            <h2 className="text-white text-xl -mt-1 cursor-pointer max-sm:text-[15px]" onClick={() => navigate('/')}>Home</h2>
+            <img src={arrow} alt="arrow" className="md:w-10 md:h-6 md:ml-3 max-sm:w-6 max-sm:h-3 max-sm:mt-1 max-sm:ml-2" />
+            <h4 className="text-white -mt-1  max-sm:ml-2 md:ml-3 text-xl cursor-pointer max-sm:text-[15px]" onClick={() => navigate('/blogs/How to Write a Positioning Statement')}>How to Write a Positioning Statement</h4>
           </div>
         </div>
       </div>
       <div className="bg-white flex">
         {/* first div */}
-        <div className="flex flex-col mt-[180px] items-center justify-center mb-52">
+        <div className="flex flex-col md:mt-[50px] items-center justify-center mb-52">
           {/* Basic Info */}
-          <div className="flex gap-x-20">
+          <div className="flex md:gap-x-20 max-sm:ml-[20rem] max-sm:grid max-sm:grid-cols-2">
             {info.map((item, index) => (
               <div key={index} className="flex items-center gap-x-4">
                 <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center">
@@ -218,8 +227,8 @@ const Blog_section = () => {
           {/* Divider */}
           <div className="bg-[#828282] h-[1px] w-[43rem] mt-3 mb-3 ml-6"></div>
           {/* Paragraphs */}
-          <div className="flex flex-col gap-y-3 mr-[110px]">
-            <p className="font-Blinker font-normal text-[#828282] w-[34rem]">
+          <div className="flex flex-col gap-y-3 md:mr-[80px] md:ml-[80px]">
+            <p className="font-Blinker font-normal text-[#828282] md:w-[41rem] ">
               Launching a new business is an exhilarating endeavor, but it’s
               important to recognize that many startups face significant hurdles
               that can lead to failure. By understanding these common pitfalls,
@@ -230,11 +239,11 @@ const Blog_section = () => {
           </div>
 
           {/* Contents - 2 */}
-          <div className="flex flex-col gap-y-5 justify-start mt-[80px] w-[505px] mr-[150px]">
+          <div className="flex flex-col gap-y-2 justify-start mt-[20px] w-[655px] -mr-1">
             {content.map((item, index) => (
               <div key={index} className="flex flex-col text-[18px] mb-4">
                 <h1 className="font-Blinker font-bold">
-                  {item.id}. {item.title}
+                  {item.title}
                 </h1>
                 <p className="font-Blinker font-normal text-black">
                   Problem:{" "}
@@ -252,7 +261,7 @@ const Blog_section = () => {
             ))}
 
             {/*Conclusion*/}
-            <h3 className="mt-8 -mb-3 font-Blinker font-bold text-xl ">
+            <h3 className="mt-5 -mb-3 font-Blinker font-bold text-xl ">
               Conclusion
             </h3>
             <p className="text-[#828282] font-Blinker font-normal">
@@ -264,7 +273,7 @@ const Blog_section = () => {
         {/* second div */}
         <div className="flex flex-col mt-[130px] ml-12 gap-y-32">
           {/*Information*/}
-          <div className="border-[#D9D9D9] w-72 h-96 border-[2px] flex flex-col items-center justify-center">
+          <div className="border-[#D9D9D9] w-72 h-[505px] border-[2px] flex flex-col items-center justify-center">
             <img src={author} alt="" className="rounded-full h-32 w-32" />
             <h1 className="text-black font-Blinker font-normal mt-3">
               Ashutosh K Pandey
@@ -273,8 +282,8 @@ const Blog_section = () => {
               Growth Marketing Consultant
             </h1>
             <div className="bg-[#828282] h-[1px] w-[12rem] mt-7 mb-3"></div>
-            <h1 className="text-black font-Blinker font-normal">
-              About Author
+            <h1 className="text-black font-Blinker font-normal md:text-[14px] w-56 text-center">
+              With 17 years in demand generation, business development, and outbound sales, I've worked with tech startups to drive growth by identifying markets and understanding customer pain points through data analysis. On this blog, I share tips and insights from my experiences in startup growth and market research, aiming to help founders, marketers, and sales professionals navigate the challenges of scaling their businesses.
             </h1>
           </div>
           <div>

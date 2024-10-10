@@ -5,22 +5,21 @@ const Growth1 = () => {
   const faqs = [
     {
       id: 1,
-      question:
-        "What is the process for determining product-market fit, and how can your team assist with it?",
-      desc: "Our team conducts thorough market research to identify your target audience's needs and pain points. We analyze customer feedback, competitor offerings, and market trends to refine your product's features and value proposition. Through iterative testing and validation, we ensure that your product aligns perfectly with market demands, enhancing its appeal and likelihood of success.",
+      question: "How do you help achieve product-market fit?",
+      desc: "We refine your product by analyzing market trends, competitors, and customer feedback. Testing ensures the product aligns with market needs for success.",
     },
     {
       id: 2,
-      question: "How does your go-to-market (GTM) strategy work?",
-      desc: "Our GTM strategy involves a comprehensive approach that includes market research, positioning, messaging, and distribution planning. We work closely with you to create a tailored strategy that maximizes visibility and impact during your product launch. This includes identifying the right channels, crafting compelling messaging, and establishing metrics to measure success, ensuring your product gains traction in the market.",
+      question: "What’s your GTM strategy process?",
+      desc: "We develop a custom plan for your launch, focusing on the right channels, clear messaging, and performance metrics to boost visibility and impact.",
     },
     {
       id: 3,
-      question: "What support do we provide for scaling your business?",
-      desc: "We offer customized scaling strategies that focus on optimizing your current operations, expanding your market reach, and driving sustainable growth. Our team analyzes your existing processes, identifies growth opportunities, and implements actionable solutions. We also provide ongoing support to ensure that your business can adapt to changing market conditions and continue to thrive.",
+      question: "How do you support business scaling?",
+      desc: "We review your operations, find growth areas, and implement strategies for long-term success, while offering ongoing support to adapt to the market.",
     },
   ];
-
+  
   // Track if any FAQ is open
   const [isOpen, setIsOpen] = useState(false);
 
@@ -38,8 +37,8 @@ const Growth1 = () => {
             className="h-[35rem] -ml-[70px] hidden md:block"
           />
           <div className="flex flex-col pb-12 px-4 md:px-0">
-            <h1 className="font-Blinker font-normal md:w-[380px] mt-2 text-[42px] max-sm:w-[318px]">
-              From Market Fit to Outbound Reach, We Optimize Every Step
+            <h1 className="font-Blinker font-normal md:w-[380px] md:mt-2 md:text-[42px] max-sm:w-[318px] max-sm:mt-9 max-sm:text-[32px]">
+              From Market Fit to Outbound Outreach, We Optimize Every Step
             </h1>
             <div className="flex flex-col md:flex-row">
               <div className="flex flex-col">
@@ -73,7 +72,7 @@ const Growth1 = () => {
                     className="flex flex-col bg-[#E7E7E7] p-3 my-2 rounded-md transition-all"
                   >
                     <summary className="font-Blinker font-normal text-lg cursor-pointer">
-                      {item.id}. {item.question}
+                      {item.question}
                     </summary>
                     <p className="font-Blinker font-light ml-4 mt-2 ">
                       {item.desc}

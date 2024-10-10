@@ -1,12 +1,13 @@
-import cost_effective from "../../public/assets/cost_effective.png";
 import industry_exp from "../../public/assets/industry.png";
 import innovative from "../../public/assets/innovative.png";
 import scalability from "../../public/assets/scalability.png";
+import customized_solutions from "../../public/assets/customized_solutions.png";
+import proven_track from "../../public/assets/proven_track.png";
 
 const Features = () => {
   const features = [
     {
-      pic: cost_effective,
+      pic: industry_exp,
       title: "Industry Expertise",
       content:
         "Benefit from our deep knowledge across various sectors, ensuring strategies that resonate with your specific market needs.",
@@ -18,13 +19,13 @@ const Features = () => {
         "Harness the power of in-depth market research and analytics to inform your strategic decisions & fine-tune your growth strategies for maximum effectiveness.",
     },
     {
-      pic: industry_exp,
+      pic: customized_solutions,
       title: "Customized Solutions",
       content:
         "Experience tailored marketing strategies designed to address your unique challenges and goals, enhancing your competitive edge.",
     },
     {
-      pic: scalability,
+      pic: proven_track,
       title: "Proven Track Record",
       content:
         "Join a portfolio of successful partnerships where our innovative approaches have consistently delivered tangible results and sustainable growth.",
@@ -33,7 +34,7 @@ const Features = () => {
 
   return (
     <div className="bg-white w-screen mt-10 flex justify-center items-center overflow-x-hidden md:mb-6">
-      <div className="flex flex-row max-sm:flex-col max-sm:gap-y-5 justify-center items-center res-width gap-x-5">
+      <div className="flex flex-row max-sm:flex-col max-sm:gap-y-5 justify-center items-center res-width gap-x-5 max-sm:mr-6">
         {features.map((item, index) => (
           <div
             key={index}

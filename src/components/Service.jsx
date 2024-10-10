@@ -40,6 +40,12 @@ const Services = () => {
       content:
         "We help implement and optimize CRM systems to effectively streamline processes, enhance meaningful customer interactions, and drive retention, ensuring you stay connected and actively engaged with your audience.",
     },
+    {
+      pic: crm,
+      title: "B2B LeadGen",
+      content:
+        "Leverage AI-powered tools for personalized outreach that boosts email engagement. We refine strategies through A/B testing and customize cold calls using buyer insights for higher conversion rates.",
+    }
   ];
 
   const settings = {
@@ -93,7 +99,7 @@ const Services = () => {
           {features.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-left p-5 bg-white shadow-lg rounded-lg transition-transform transform hover:shadow-3xl mx-4 border border-gray-200 hover:shadow-black"
+              className="flex flex-col items-left p-5 bg-white shadow-lg rounded-lg transition-transform transform hover:shadow-3xl md:mx-4 border border-gray-200 hover:shadow-black"
             >
               <img
                 src={item.pic}

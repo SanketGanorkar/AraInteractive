@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="flex flex-col">
               {/* Left section */}
               <div className="max-sm:flex flex-col items-start">
-                <img src={ara} alt="" />
+                <img src={ara} alt="" className="max-sm:ml-6"/>
                 <p className="text-white font-Blinker font-light text-pretty w-[29rem] pt-7 max-sm:ml-7 max-sm:w-[20rem]">
                   We understand that business can be chaotic. That’s where we
                   come in. We’re focused on adding some much-needed balance to

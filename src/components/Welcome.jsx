@@ -21,16 +21,17 @@ const Welcome = () => {
               Navigating Your Growth Journey Together
             </h2>
             <p className="font-Blinker font-light md:w-[27rem] mt-11 max-sm:w-[90%]">
-            We specialize in crafting bespoke marketing strategies that drive tangible results and sustainable success. Whether you’re just starting out or ready to scale, our expertise will guide you every step of the way.
+              We specialize in crafting bespoke marketing strategies that drive tangible results and sustainable success. Whether you’re just starting out or ready to scale, our expertise will guide you every step of the way.
             </p>
             <p className="font-Blinker font-light md:w-[26rem] mt-5 max-sm:w-[90%]">
-            Leverage hundreds of customized insights and tactics, honed from real-world experience, to accelerate your path to success.
+              Leverage hundreds of customized insights and tactics, honed from real-world experience, to accelerate your path to success.
             </p>
           </div>
 
-          <div className="bg-[#000000A3] h-80 w-[1px] md:mt-3 ml-12 max-sm:hidden opacity-45"></div>
+          {/* <div className="bg-[#000000A3] h-80 w-[1px] md:mt-3 ml-12 max-sm:hidden opacity-45 "></div> */}
 
-          <div className="flex flex-col md:-ml-[98px] max-sm:mt-5"> {/* Added margin for mobile */}
+          <div className="flex flex-col md:-ml-[98px] max-sm:mt-5">
+            <div className="bg-[#000000A3] h-80 w-[1px] md:mt-3 -ml-6 max-sm:hidden opacity-45 absolute"></div>
             <div className="md:mt-[30px] md:ml-8">
               <h1 className="font-Blinker font-normal md:text-4xl max-sm:text-5xl">
                 50+

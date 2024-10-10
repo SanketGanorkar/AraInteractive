@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
-import { useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import ara from "../../public/assets/Ara.png";
 
 const Navbar = () => {
@@ -36,14 +36,14 @@ const Navbar = () => {
               {/* <a href="#home">Home</a> */}
               <a href="/">Home</a>
             </li>
-            <li className="uppercase cursor-pointer">
+            <li className="uppercase cursor-pointer" onClick={()=>navigate('/')}>
               <a href="#services">Services</a>
             </li>
-            <li className="uppercase cursor-pointer">
+            <li className="uppercase cursor-pointer" onClick={()=>navigate('/')}>
               <a href="#about">About us</a>
             </li>
-            <li className="uppercase cursor-pointer">
-              <h2 href="#blogs" onClick={()=>navigate('/')}>Blogs</h2>
+            <li className="uppercase cursor-pointer" onClick={() => navigate('/')}>
+            <a href="#blogs">Blogs</a>
             </li>
           </ul>
           <button className="uppercase cursor-pointer bg-white p-2 text-black rounded-xl text-[13px] font-bold mb-1 max-sm:hidden">
@@ -68,7 +68,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="uppercase cursor-pointer">
-              <a  href="#about" onClick={handleMenuClick}>
+              <a href="#about" onClick={handleMenuClick}>
                 About us
               </a>
             </li>

@@ -1,4 +1,5 @@
 import Footer from "../Footer.jsx";
+import { useEffect, useRef, useState } from 'react';
 import { FaRegCalendarAlt, FaTag } from "react-icons/fa";
 import author from "../../../public/assets/author.png";
 import arrow from "../../../public/assets/arrow.png"
@@ -183,6 +184,29 @@ const Blog_section = () => {
     },
   ];
 
+  const [isSticky, setIsSticky] = useState(true); // To control the right section's sticky behavior
+  const rightSectionRef = useRef(null);
+  const endSectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const triggerPoint = rightSectionRef.current.offsetTop - 100; // Adjust this value to control when it becomes sticky
+      const endPoint = endSectionRef.current.offsetTop;
+
+      if (scrollPosition > triggerPoint && scrollPosition < endPoint) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div className="flex flex-col items-center justify-center font-Blinker">
       <div className="bg-introbg w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
@@ -271,90 +295,60 @@ const Blog_section = () => {
         </div>
 
         {/* second div */}
-        <div className="flex flex-col mt-[130px] ml-12 gap-y-32">
-          {/*Information*/}
+        <div ref={rightSectionRef} className={`flex flex-col mt-[130px] ml-12 gap-y-32 ${isSticky ? 'sticky top-[100px]' : ''}`}>
+          {/* Information */}
           <div className="border-[#D9D9D9] w-72 h-[505px] border-[2px] flex flex-col items-center justify-center">
             <img src={author} alt="" className="rounded-full h-32 w-32" />
-            <h1 className="text-black font-Blinker font-normal mt-3">
-              Ashutosh K Pandey
-            </h1>
-            <h1 className="text-black font-Blinker font-normal">
-              Growth Marketing Consultant
-            </h1>
+            <h1 className="text-black font-Blinker font-normal mt-3">Ashutosh K Pandey</h1>
+            <h1 className="text-black font-Blinker font-normal">Growth Marketing Consultant</h1>
             <div className="bg-[#828282] h-[1px] w-[12rem] mt-7 mb-3"></div>
             <h1 className="text-black font-Blinker font-normal md:text-[14px] w-56 text-center">
-              With 17 years in demand generation, business development, and outbound sales, I've worked with tech startups to drive growth by identifying markets and understanding customer pain points through data analysis. On this blog, I share tips and insights from my experiences in startup growth and market research, aiming to help founders, marketers, and sales professionals navigate the challenges of scaling their businesses.
+              With 17 years in demand generation and sales, I’ve helped tech startups grow by identifying markets and understanding customer needs. On this blog, I share insights to help founders and marketers scale their businesses.
             </h1>
           </div>
-          <div>
-            {/* Categories */}
-            <div className="flex flex-col mt-6">
-              <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">
-                Categories
-              </h1>
-              <div className="flex flex-col">
-                {categories.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex justify-between border-[#828282] border-[1px] h-10"
-                  >
-                    <h3 className="font-Blinker font-normal text-black ml-3 mt-2">
-                      {item.title}
-                    </h3>
-                    <h4 className="font-Blinker font-normal text-black mr-3 mt-2">
-                      {item.page}
-                    </h4>
-                  </div>
-                ))}
-              </div>
-            </div>
 
-            {/* Latest post */}
-            <div className="flex flex-col mt-6">
-              <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">
-                Latest Post
-              </h1>
-              <div className="flex flex-col">
-                {latepost.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex border-[#7E7E7E] border-[1px] h-20 items-center"
-                  >
-                    <div className="bg-[#D9D9D9] w-12 h-12 ml-6"></div>
-                    <div className="flex flex-col ml-3">
-                      <h5 className="font-Blinker font-normal text-[#828282] text-[13px]">
-                        {item.date}
-                      </h5>
-                      <h6 className="font-Blinker font-normal text-black text-[13px]">
-                        {item.title}
-                      </h6>
-                    </div>
-                  </div>
-                ))}
-              </div>
+          {/* Categories */}
+          <div className="flex flex-col mt-6">
+            <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">Categories</h1>
+            <div className="flex flex-col">
+              {categories.map((item, index) => (
+                <div key={index} className="flex justify-between border-[#828282] border-[1px] h-10">
+                  <h3 className="font-Blinker font-normal text-black ml-3 mt-2">{item.title}</h3>
+                  <h4 className="font-Blinker font-normal text-black mr-3 mt-2">{item.page}</h4>
+                </div>
+              ))}
             </div>
+          </div>
 
-            {/* Newsletter */}
-            <div className="flex flex-col mt-6 mb-6">
-              <div className="bg-black text-white font-Blinker font-semibold h-10 pt-2 pl-6">
-                Subscribe Newsletter
-              </div>
-              <div className="bg-white border-[#7E7E7E] border-[1px] h-44 flex flex-col w-72 items-start pl-6">
-                <p className="font-Blinker font-normal text-black text-[13px] w-56 mt-5">
-                  Sign up to receive notifications about the latest news and
-                  events from us!
-                </p>
-                <input
-                  className="border-black border-[1px] rounded-full text-[#828282] w-48 text-[12px] p-1 pl-3 mt-4"
-                  placeholder="Email Address"
-                />
-                <button className="font-Blinker font-normal text-white bg-black p-1 w-48 rounded-full mt-3 text-[13px]">
-                  Subscribe Now !!!
-                </button>
-              </div>
+          {/* Latest post */}
+          <div className="flex flex-col mt-[65px]">
+            <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">Latest Post</h1>
+            <div className="flex flex-col">
+              {latepost.map((item, index) => (
+                <div key={index} className="flex border-[#7E7E7E] border-[1px] h-20 items-center">
+                  <div className="bg-[#D9D9D9] w-12 h-12 ml-6"></div>
+                  <div className="flex flex-col ml-3">
+                    <h5 className="font-Blinker font-normal text-[#828282] text-[13px]">{item.date}</h5>
+                    <h6 className="font-Blinker font-normal text-black text-[13px]">{item.title}</h6>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Newsletter */}
+          <div className="flex flex-col mt-[65px] mb-6">
+            <div className="bg-black text-white font-Blinker font-semibold h-10 pt-2 pl-6">Subscribe Newsletter</div>
+            <div className="bg-white border-[#7E7E7E] border-[1px] h-44 flex flex-col w-72 items-start pl-6">
+              <p className="font-Blinker font-normal text-black text-[13px] w-56 mt-5">
+                Sign up to receive notifications about the latest news and events from us!
+              </p>
+              <input className="border-black border-[1px] rounded-full text-[#828282] w-48 text-[12px] p-1 pl-3 mt-4" placeholder="Email Address" />
+              <button className="font-Blinker font-normal text-white bg-black p-1 w-48 rounded-full mt-3 text-[13px]">Subscribe Now !!!</button>
             </div>
           </div>
         </div>
+
       </div>
       <Footer />
     </div>

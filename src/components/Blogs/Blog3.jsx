@@ -125,7 +125,7 @@ const Blog_section = () => {
   return (
     <div className="flex flex-col items-center justify-center">
      
-      <div className="bg-introbg w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
+      <div className="bg-start_busi_bg w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
         <div className="flex flex-col justify-center items-start h-full">
           <h1 className="text-white font-Blinker text-4xl leading-10 font-normal w-[22rem] mr-[38rem]">
             Starting a Business: How to Go Prepared
@@ -182,7 +182,7 @@ const Blog_section = () => {
             ))}
             {/*Conclusion*/}
             <h3 className="mt-8 -mb-3 font-Blinker font-bold text-xl ">Conclusion</h3>
-            <p className="text-[#828282] font-Blinker font-normal">
+            <p className="text-[#828282] font-Blinker font-normal text-[18px]">
               Starting a business requires careful preparation and strategic
               thinking. By conducting thorough market research, creating a solid
               business plan, establishing a strong brand identity, and setting
@@ -198,15 +198,13 @@ const Blog_section = () => {
         {/* second div */}
         <div className="flex flex-col mt-[130px] ml-12 gap-y-32">
           {/*Information*/}
-          <div className="border-[#D9D9D9] w-72 h-96 border-[2px] flex flex-col items-center justify-center">
+          <div className="border-[#D9D9D9] w-72 h-[505px] border-[2px] flex flex-col items-center justify-center">
             <img src={author} alt="" className="rounded-full h-32 w-32" />
-            <h1 className="text-black font-Blinker font-normal mt-3">
-            Ashutosh K Pandey 
-            </h1>
+            <h1 className="text-black font-Blinker font-normal mt-3">Ashutosh K Pandey</h1>
             <h1 className="text-black font-Blinker font-normal">Growth Marketing Consultant</h1>
             <div className="bg-[#828282] h-[1px] w-[12rem] mt-7 mb-3"></div>
-            <h1 className="text-black font-Blinker font-normal">
-              About Author
+            <h1 className="text-black font-Blinker font-normal md:text-[14px] w-56 text-center">
+              With 17 years in demand generation and sales, I’ve helped tech startups grow by identifying markets and understanding customer needs. On this blog, I share insights to help founders and marketers scale their businesses.
             </h1>
           </div>
           <div>

@@ -7,7 +7,13 @@ export default {
 		backgroundImage: {
 			introbg: "url('/assets/intro_bg.png')",
 			navbg: "url('/assets/navbg.png')",
-			direction: "url('/assets/direction.png')"
+			direction: "url('/assets/direction.png')",
+			bus_fail: "url('/assets/bus_fail_bg.png')",
+			pos_elem: "url('/assets/pos_elem_bg.png')",
+			outbound_bg: "url('/assets/outbound_bg.png')",
+			scale_growth_bg: "url('/assets/scale_growth_bg.png')",
+			serv_busi_bg: "url('/assets/serv_busi_bg.png')",
+			start_busi_bg: "url('/assets/start_busi_bg.png')"
 		},
   		fontFamily: {
   			Blinker: ['Blinker','sans-serif'],

@@ -1,5 +1,4 @@
 import { FaXTwitter } from "react-icons/fa6";
-import { FaArrowRight } from "react-icons/fa";
 import { LuLinkedin } from "react-icons/lu";
 import { IoLogoInstagram } from "react-icons/io5";
 import ara from "../../public/assets/Ara.png";
@@ -39,8 +38,8 @@ const Footer = () => {
                   Company Information
                 </h3>
                 <p className="text-white font-Blinker font-light w-[29rem] pt-5 max-sm:w-[18rem] max-sm:ml-7">
-                  <strong>Office</strong>: 2220 Plymouth Rd #302, Hopkins, Minnesota(MN), 55305 <br />
-                  <strong>Send Mail</strong>: Herringtonconsulting@gmail.com Call us: (234)
+                  <strong>Office</strong>: 2Saket Salcon, Rasvilas, Saket District Centre, Sector 6, Pushp Vihar, New Delhi, India - 110017 <br />
+                  <strong>Send Mail</strong>:  hello@arainteractive.com <strong>Call us</strong>: (234)
                   109-6666
                 </p>
               </div>
@@ -75,10 +74,12 @@ const Footer = () => {
                     Our Services
                   </h1>
                   <div className="text-white font-Blinker font-light pt-3 flex flex-col gap-y-3">
-                    <h3>Business growth consulting</h3>
-                    {/* <h3>Search Engine Optimization</h3> */}
-                    <h3>Conversion Optimization</h3>
-                    {/* <h3>Managed IT services</h3> */}
+                    <h3>Market Fit</h3>
+                    <h3>GTM (Go-to-Market)</h3>
+                    <h3>Outbound</h3>
+                    <h3>Scaling</h3>
+                    <h3>CRM</h3>
+                    <h3>B2B LeadGen</h3>
                   </div>
                 </div>
                 {/* Quick Links */}

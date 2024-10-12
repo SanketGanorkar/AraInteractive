@@ -1,7 +1,12 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import blog from "../../public/assets/gtm.png";
+import outbound_bg from "../../public/assets/outbound_bg.png";
+import start_busi_bg from "../../public/assets/start_busi_bg.png";
+import bus_fail_bg from "../../public/assets/bus_fail_bg.png";
+import pos_elem_bg from "../../public/assets/pos_elem_bg.png";
+import scale_growth_bg from "../../public/assets/scale_growth_bg.png";
+import serv_busi_bg from "../../public/assets/serv_busi_bg.png";
 import "./caraousel.css";
 import { Link, useNavigate } from "react-router-dom"
 
@@ -10,31 +15,45 @@ const Blogs = () => {
   const navigate = useNavigate()
   const features = [
     {
-      pic: blog,
+      pic: bus_fail_bg,
       title: "Reasons Why New Businesses Fail",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "Launching a new business is an exhilarating endeavor, but it’s important to recognize that many startups face significant hurdles that can lead to failure ...",
       path: '/blogs/Reasons Why New Businesses Fail'
     },
     {
-      pic: blog,
+      pic: pos_elem_bg,
       title: "How to Write a Positioning Statement",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "Creating a compelling positioning statement is essential for defining your brand's place in the market. Here’s a step-by-step guide to help you craft an effective positioning statement",
       path: '/blogs/How to Write a Positioning Statement'
     },
     {
-      pic: blog,
+      pic: start_busi_bg,
       title: "Starting a Business: How to Go Prepared",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "Starting a business is an exciting and challenging venture that requires careful planning and preparation. Whether you’re launching a startup or transitioning ...",
       path: '/blogs/Starting a Business: How to Go Prepared'
     },
     {
-      pic: blog,
-      title: "How to Run a Services Business Successfully",
+      pic: serv_busi_bg,
+      title: "How to Run a Services Business",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "Running a service-based business can be both rewarding and challenging, as it relies heavily on customer satisfaction, unlike traditional product-based companies.",
+      path: '/blogs/How to Run a Services Business Successfully'
+    },
+    {
+      pic: outbound_bg,
+      title: "Understanding Outbound Sales",
+      content:
+        "In the ever-evolving landscape of sales and marketing, businesses are continually exploring methods to connect with potential customers.",
+      path: '/blogs/How to Run a Services Business Successfully'
+    },
+    {
+      pic: scale_growth_bg,
+      title: "Difference Between Scale and Growth",
+      content:
+        "In the realm of business, the terms scale and growth are often used interchangeably, but they represent fundamentally different concepts.",
       path: '/blogs/How to Run a Services Business Successfully'
     },
   ];
@@ -82,7 +101,7 @@ const Blogs = () => {
       <h3 className="font-Blinker font-light text-[17px] max-sm:mt-3">
         Read the latest news from us.
       </h3>
-      <div className="w-full max-w-4xl py-10 px-5 mx-auto">
+      <div className="w-full md:max-w-6xl py-10 px-5 mx-auto">
         <Slider {...settings}>
           {features.map((item, index) => (
             <div
@@ -93,7 +112,7 @@ const Blogs = () => {
                 <img
                   src={item.pic}
                   alt={item.title}
-                  className="w-full h-[170px] object-cover max-w-[280px] mx-auto"
+                  className="w-full h-[170px] object-cover  mx-auto"
                 />
               </Link>
               <h1 className="pt-5 font-Blinker font-semibold text-xl text-left">

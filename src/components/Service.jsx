@@ -94,7 +94,7 @@ const Services = () => {
         Discover our range of tailored solutions designed to drive growth and
         foster lasting success for your business.
       </h3>
-      <div className="w-full max-w-4xl py-10 px-5 mx-auto">
+      <div className="w-full md:max-w-6xl py-10 px-5 mx-auto">
         <Slider {...settings}>
           {features.map((item, index) => (
             <div
@@ -104,7 +104,7 @@ const Services = () => {
               <img
                 src={item.pic}
                 alt={item.title}
-                className="w-full h-[170px] object-cover max-w-[280px] mx-auto"
+                className="w-full h-[170px] object-cover  mx-auto"
               />
               <h1 className="pt-5 font-Blinker font-semibold text-xl text-left">
                 {item.title}

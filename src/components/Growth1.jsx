@@ -1,4 +1,3 @@
-import { useState } from "react";
 import growth1 from "../../public/assets/pic.png";
 
 const Growth1 = () => {
@@ -6,7 +5,7 @@ const Growth1 = () => {
     {
       id: 1,
       question: "How do you help achieve product-market fit?",
-      desc: "We refine your product by analyzing market trends, competitors, and customer feedback. Testing ensures the product aligns with market needs for success.",
+      desc: "We refine the product by analyzing market trends, competitors, & customer feedback. Testing ensures the product aligns with market needs for success.",
     },
     {
       id: 2,
@@ -19,13 +18,6 @@ const Growth1 = () => {
       desc: "We review your operations, find growth areas, and implement strategies for long-term success, while offering ongoing support to adapt to the market.",
     },
   ];
-  
-  // Track if any FAQ is open
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleToggle = (index) => {
-    setIsOpen((prev) => (prev === index ? null : index)); // Toggle open/close state
-  };
 
   return (
     <div className="bg-[#F1EEEE] w-full" id="growth">
@@ -34,7 +26,7 @@ const Growth1 = () => {
           <img
             src={growth1}
             alt=""
-            className="h-[35rem] -ml-[70px] hidden md:block"
+            className="h-[38rem] -ml-[70px] hidden md:block"
           />
           <div className="flex flex-col pb-12 px-4 md:px-0">
             <h1 className="font-Blinker font-normal md:w-[380px] md:mt-2 md:text-[42px] max-sm:w-[318px] max-sm:mt-9 max-sm:text-[32px]">
@@ -54,22 +46,18 @@ const Growth1 = () => {
               </div>
 
               {/* Vertical divider */}
-              <div
-                className={`bg-[#000000A3] ${isOpen !== false ? "h-[400px]" : "h-[270px]"
-                  } w-[1px] mx-0 md:ml-12 md:mx-12 max-sm:hidden transition-all duration-300`}
-              ></div>
+              <div className="bg-[#000000A3] h-[200px] w-[1px] mx-0 md:ml-12 md:mx-12 max-sm:hidden"></div>
 
               {/* FAQ Section */}
-              <div className="flex flex-col gap-y-2 max-sm:mt-12 md:-mt-[170px]">
+              <div className="flex flex-col gap-y-2 max-sm:mt-12 md:-mt-[120px]">
                 <h4 className="font-Blinker font-normal text-2xl ml-0 md:ml-2">
                   FAQs
                 </h4>
                 {faqs.map((item, index) => (
                   <details
                     key={index}
-                    open={isOpen === index}
-                    onClick={() => handleToggle(index)}
-                    className="flex flex-col bg-[#E7E7E7] p-3 my-2 rounded-md transition-all"
+                    className="flex flex-col bg-[#E7E7E7] p-3 my-2 rounded-md"
+                    name="accordian"
                   >
                     <summary className="font-Blinker font-normal text-lg cursor-pointer">
                       {item.question}
@@ -90,81 +78,3 @@ const Growth1 = () => {
 
 export default Growth1;
 
-// import growth1 from "../../public/assets/pic.png";
-
-// const Growth1 = () => {
-//   const faqs = [
-//     {
-//       id: 1,
-//       question: "What is the process for determining product-market fit, and how can your team assist with it?",
-//       desc: "We conduct market research to identify your audience's needs, analyze feedback and competitors, and refine your product. Through testing and validation, we ensure your product aligns with market demands for greater success.",
-//     },
-//     {
-//       id: 2,
-//       question: "How does your go-to-market (GTM) strategy work?",
-//       desc: "We’ve designed a culture that allows our stewards to assimilate with our clients and bring the best of who we are to your business.",
-//     },
-//     {
-//       id: 3,
-//       question: "What support do we provide for scaling your business?",
-//       desc: "We’ve designed a culture that allows our stewards to assimilate with our clients and bring the best of who we are to your business.",
-//     },
-//   ];
-
-//   return (
-//     <div className="bg-[#F1EEEE]">
-//       <div className="flex justify-center items-center">
-//         <div className="flex flex-col md:flex-row justify-start gap-x-1 md:pt-[70px] res-width">
-//           <img
-//             src={growth1}
-//             alt=""
-//             className="h-[35rem] -ml-[70px] hidden md:block"
-//           />
-//           <div className="flex flex-col pb-12 px-4 md:px-0">
-//             <h1 className="font-Blinker font-normal md:w-[580px] mt-12 text-[42px] max-sm:w-[318px]">
-//               Scale, Growth and Optimizing as Fast as you need to.
-//             </h1>
-//             <div className="flex flex-col md:flex-row">
-//               <div className="flex flex-col">
-//                 <h2 className="font-Blinker font-normal md:w-[380px] mt-12 text-2xl">
-//                 “ Sales can be overwhelming, with many unknowns and uncertainties. That’s why we simplify the go-to-market process, removing the guesswork. “
-//                 </h2>
-//                 <h3 className="font-Blinker font-normal text-2xl mt-7">
-//                   Ashutosh K Pandey
-//                 </h3>
-//                 <h4 className="font-Blinker font-light text-[#8E8E8E]">
-//                   Growth Marketing Consultant
-//                 </h4>
-//               </div>
-
-//               {/* Vertical divider */}
-//               <div className="bg-[#000000A3] h-[270px] w-[1px] mt-5 mx-0 md:ml-12 md:mx-12 max-sm:hidden"></div>
-
-//               {/* FAQ Section */}
-//               <div className="flex flex-col gap-y-2 max-sm:mt-12">
-//                 <h4 className="font-Blinker font-normal text-2xl ml-0 md:ml-12">
-//                   Some FAQ here
-//                 </h4>
-//                 {faqs.map((item, index) => (
-//                   <details
-//                     key={index}
-//                     className="flex flex-col bg-[#E7E7E7] p-3 my-2 rounded-md"
-//                   >
-//                     <summary className="font-Blinker font-normal text-lg cursor-pointer">
-//                       {item.id}. {item.question}
-//                     </summary>
-//                     <p className="font-Blinker font-light ml-4 mt-2 ">
-//                       {item.desc}
-//                     </p>
-//                   </details>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Growth1;

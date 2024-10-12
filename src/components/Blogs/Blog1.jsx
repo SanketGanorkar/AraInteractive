@@ -1,5 +1,4 @@
 import Footer from "../Footer.jsx";
-import { useEffect, useRef, useState } from 'react';
 import { FaRegCalendarAlt, FaTag } from "react-icons/fa";
 import author from "../../../public/assets/author.png";
 import arrow from "../../../public/assets/arrow.png"
@@ -55,18 +54,18 @@ const Blog_section = () => {
   const latepost = [
     {
       id: 1,
-      date: "30 Oct 2024",
-      title: "5 Impactful Elements That",
+      date: "30 Sept 2024",
+      title: "Writing a Positioning Statement",
     },
     {
       id: 2,
-      date: "30 Oct 2024",
-      title: "Revolutionizing The Future Of",
+      date: "7 Oct 2024",
+      title: "Starting a Business",
     },
     {
       id: 3,
-      date: "30 Oct 2024",
-      title: "A Guide to Embrace",
+      date: "21 Sept 2024",
+      title: "Runing a Services Business",
     },
   ];
 
@@ -184,7 +183,6 @@ const Blog_section = () => {
     },
   ];
 
-
   return (
     <div className="flex flex-col items-center justify-center font-Blinker">
       <div className="bg-introbg w-[99.2vw] bg-no-repeat bg-cover overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
@@ -197,10 +195,6 @@ const Blog_section = () => {
             </span>
             (and How to Prevent Them)
           </h1>
-
-          {/* <h1 className="text-white font-Blinker text-4xl leading-10 font-normal md:w-[30rem] md:mr-[38rem] max-sm:ml-8">
-            Reasons Why New Businesses Fail <br />(and How to Prevent Them)
-          </h1> */}
 
           <div className="flex pt-12 max-sm:ml-7">
             <h2 className="text-white text-xl -mt-1 cursor-pointer max-sm:text-[15px]" onClick={() => navigate('/')}>Home</h2>

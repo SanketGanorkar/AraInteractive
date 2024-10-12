@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
+import { HiArrowLongRight } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom"
 import ara from "../../public/assets/Ara.png";
 
@@ -46,9 +47,10 @@ const Navbar = () => {
             <a href="#blogs">Blogs</a>
             </li>
           </ul>
-          <button className="uppercase cursor-pointer bg-white p-2 text-black rounded-xl text-[13px] font-bold mb-1 max-sm:hidden">
-            Book a call
-          </button>
+          <div className="uppercase cursor-pointer bg-[#434c51] p-2 text-white rounded-xl text-[13px] font-bold mb-1 max-sm:hidden flex hover:text-black hover:bg-white ">
+           <h3>Plan With Us</h3>
+           <HiArrowLongRight className="mt-1 ml-2"/>
+          </div>
         </div>
       </div>
 

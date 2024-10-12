@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <BrowserRouter basename="/AraInteractive">
-        <div className="overflow-x-hidden">
+        <div className="overflowxhidden">
           <Scroll />
           <Navbar />
           <Routes>

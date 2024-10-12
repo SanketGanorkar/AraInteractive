@@ -2,15 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  scroll-behavior : smooth;
+body {
+  scroll-behavior: smooth;
 }
 .res-width {
   width: min(90%, 90rem);
 }
+.res-width3 {
+  width: min(90%, 70rem);
+}
 
-.res-width2{
-  height: min(100vh,50rem);
+.res-width2 {
+  height: min(100vh, 50rem);
 }
 
 @layer base {
@@ -77,4 +80,3 @@ body{
     @apply bg-background text-foreground;
   }
 }
-

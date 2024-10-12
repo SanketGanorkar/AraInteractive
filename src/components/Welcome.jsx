@@ -8,16 +8,16 @@ const Welcome = () => {
         <img
           src={welcome}
           alt="welcome image"
-          className="w-[90%] md:w-[315px] md:h-[398px] max-sm:h-auto mx-auto md:-ml-[63px]" // Adjusted width and height for mobile
+          className="w-[90%] md:w-[315px] md:h-[398px] max-sm:h-auto mx-auto md:-ml-[63px]"
         />
 
         {/* Mid part */}
         <div className="flex md:flex-row px-3 w-full justify-between max-sm:flex-col">
-          <div className=""> {/* Center text on mobile */}
-            <h1 className="font-Blinker font-extralight text-2xl mt-6">
+          <div className="md:ml-6"> {/* Center text on mobile */}
+            <h1 className="font-Blinker font-extralight text-2xl md:-mt-3">
               Welcome to ARA Interactive
             </h1>
-            <h2 className="font-Blinker font-normal text-3xl md:w-[19rem] mt-3 max-sm:w-[90%]"> {/* Adjust width for mobile */}
+            <h2 className="font-Blinker font-normal text-3xl md:w-[19rem] mt-3 max-sm:w-[90%]">
               Navigating Your Growth Journey Together
             </h2>
             <p className="font-Blinker font-light md:w-[27rem] mt-11 max-sm:w-[90%]">
@@ -28,20 +28,18 @@ const Welcome = () => {
             </p>
           </div>
 
-          {/* <div className="bg-[#000000A3] h-80 w-[1px] md:mt-3 ml-12 max-sm:hidden opacity-45 "></div> */}
-
           <div className="flex flex-col md:-ml-[98px] max-sm:mt-5">
             <div className="bg-[#000000A3] h-80 w-[1px] md:mt-3 -ml-6 max-sm:hidden opacity-45 absolute"></div>
             <div className="md:mt-[30px] md:ml-8">
               <h1 className="font-Blinker font-normal md:text-4xl max-sm:text-5xl">
                 50+
               </h1>
-              <h2 className="md:w-32  max-sm:w-[90%]"> {/* Centered on mobile */}
+              <h2 className="md:w-32  max-sm:w-[90%]"> 
                 Growth advice for businesses
               </h2>
             </div>
             <div className="bg-[#000000A3] h-[1px] w-64 md:mt-12 max-sm:mt-6 md:-ml-6"></div>
-            <div className="mt-5 text-center max-sm:text-left"> {/* Center text on mobile */}
+            <div className="mt-5 text-center max-sm:text-left"> 
               <h1 className="md:ml-8 font-Blinker font-semibold text-xl mt-2 text-left">
                 Our Mission
               </h1>

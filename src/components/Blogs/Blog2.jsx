@@ -185,8 +185,7 @@ const Blog_section = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      
-      <div className="bg-introbg w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
+      <div className="bg-pos_elem w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
         <div className="flex flex-col justify-center items-start h-full">
           <h1 className="text-white font-Blinker text-4xl leading-10 font-normal w-[30rem] mr-[38rem]">
           How to Write a Positioning Statement
@@ -200,9 +199,9 @@ const Blog_section = () => {
       </div>
       <div className="bg-white flex">
         {/* first div */}
-        <div className="flex flex-col mt-[180px] items-center justify-center mb-52">
+        <div className="flex flex-col md:mt-[50px] items-center justify-center mb-52">
           {/* Basic Info */}
-          <div className="flex gap-x-20">
+          <div className="flex md:gap-x-20 max-sm:ml-[20rem] max-sm:grid max-sm:grid-cols-2 md:mr-[100px]">
             {info.map((item, index) => (
               <div key={index} className="flex items-center gap-x-4">
                 <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center">
@@ -216,9 +215,9 @@ const Blog_section = () => {
             ))}
           </div>
           {/* Divider */}
-          <div className="bg-[#828282] h-[1px] w-[43rem] mt-3 mb-3 ml-6"></div>
+          <div className="bg-[#828282] h-[1px] w-[43rem] mt-3 mb-3 mr-12"></div>
           {/* Paragraphs */}
-          <div className="flex flex-col gap-y-3 mr-[110px]">
+          <div className="flex flex-col gap-y-3 md:mr-[50px]">
             <p className="font-Blinker font-normal text-[#828282] w-[34rem]">
               Launching a new business is an exhilarating endeavor, but it’s
               important to recognize that many startups face significant hurdles
@@ -230,7 +229,7 @@ const Blog_section = () => {
           </div>
 
           {/* Contents - 2 */}
-          <div className="flex flex-col gap-y-5 justify-start mt-[80px] w-[505px] mr-[150px]">
+          <div className="flex flex-col gap-y-2 justify-start md:mt-[20px] md:w-[685px] md:mr-[50px]">
             {content.map((item, index) => (
               <div key={index} className="flex flex-col text-[18px] mb-4">
                 <h1 className="font-Blinker font-bold">
@@ -255,7 +254,7 @@ const Blog_section = () => {
             <h3 className="mt-8 -mb-3 font-Blinker font-bold text-xl ">
               Conclusion
             </h3>
-            <p className="text-[#828282] font-Blinker font-normal">
+            <p className="text-[#828282] font-Blinker font-normal text-[18px]">
             Starting a new business is a challenging yet rewarding journey. By recognizing the key reasons why many startups fail and implementing strategies to prevent these issues, you can significantly improve your odds of success. Careful planning, customer engagement, and a willingness to adapt are crucial components in building a thriving business.
             </p>
           </div>

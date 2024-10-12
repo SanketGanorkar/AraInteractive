@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FaRegCalendarAlt, FaTag } from "react-icons/fa";
 import author from "../../../public/assets/author.png";
 import arrow from "../../../public/assets/arrow.png"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const Blog_section = () => {
   const navigate = useNavigate()
@@ -55,18 +55,18 @@ const Blog_section = () => {
   const latepost = [
     {
       id: 1,
-      date: "30 Oct 2024",
-      title: "5 Impactful Elements That",
+      date: "30 Sept 2024",
+      title: "Writing a Positioning Statement",
     },
     {
       id: 2,
-      date: "30 Oct 2024",
-      title: "Revolutionizing The Future Of",
+      date: "7 Oct 2024",
+      title: "Starting a Business",
     },
     {
       id: 3,
-      date: "30 Oct 2024",
-      title: "A Guide to Embrace",
+      date: "21 Sept 2024",
+      title: "Runing a Services Business",
     },
   ];
 
@@ -184,10 +184,6 @@ const Blog_section = () => {
     },
   ];
 
-  const [isSticky, setIsSticky] = useState(true); // To control the right section's sticky behavior
-  const rightSectionRef = useRef(null);
-  const endSectionRef = useRef(null);
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -209,7 +205,7 @@ const Blog_section = () => {
   }, []);
   return (
     <div className="flex flex-col items-center justify-center font-Blinker">
-      <div className="bg-introbg w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
+      <div className="bg-bus_fail w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
         {/* Intro */}
         <div className="flex flex-col justify-center items-start h-full">
           <h1 className="text-white font-Blinker text-4xl leading-10 font-normal md:w-[30rem] md:mr-[38rem] max-sm:ml-6">
@@ -220,10 +216,6 @@ const Blog_section = () => {
             (and How to Prevent Them)
           </h1>
 
-          {/* <h1 className="text-white font-Blinker text-4xl leading-10 font-normal md:w-[30rem] md:mr-[38rem] max-sm:ml-8">
-            Reasons Why New Businesses Fail <br />(and How to Prevent Them)
-          </h1> */}
-
           <div className="flex pt-12 max-sm:ml-7">
             <h2 className="text-white text-xl -mt-1 cursor-pointer max-sm:text-[15px]" onClick={() => navigate('/')}>Home</h2>
             <img src={arrow} alt="arrow" className="md:w-10 md:h-6 md:ml-3 max-sm:w-6 max-sm:h-3 max-sm:mt-1 max-sm:ml-2" />
@@ -231,11 +223,11 @@ const Blog_section = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white flex">
+      <div className="bg-white flex max-sm:flex-col">
         {/* first div */}
         <div className="flex flex-col md:mt-[50px] items-center justify-center mb-52">
           {/* Basic Info */}
-          <div className="flex md:gap-x-20 max-sm:ml-[20rem] max-sm:grid max-sm:grid-cols-2">
+          <div className="flex md:gap-x-20 max-sm:ml-[20px] max-sm:grid max-sm:grid-cols-2 md:mr-[100px]">
             {info.map((item, index) => (
               <div key={index} className="flex items-center gap-x-4">
                 <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center">
@@ -249,10 +241,10 @@ const Blog_section = () => {
             ))}
           </div>
           {/* Divider */}
-          <div className="bg-[#828282] h-[1px] w-[43rem] mt-3 mb-3 ml-6"></div>
+          <div className="bg-[#828282] h-[1px] md:w-[43rem] mt-3 mb-3 mr-12 max-sm:w-[40rem] max-sm:ml-8"></div>
           {/* Paragraphs */}
-          <div className="flex flex-col gap-y-3 md:mr-[80px] md:ml-[80px]">
-            <p className="font-Blinker font-normal text-[#828282] md:w-[41rem] ">
+          <div className="flex flex-col gap-y-3 md:mr-[50px] max-sm:ml-8">
+            <p className="font-Blinker font-normal text-[#828282] md:w-[43rem] max-sm:ml-[90px] max-sm:w-[30rem] max-sm:pl-7">
               Launching a new business is an exhilarating endeavor, but it’s
               important to recognize that many startups face significant hurdles
               that can lead to failure. By understanding these common pitfalls,
@@ -263,9 +255,9 @@ const Blog_section = () => {
           </div>
 
           {/* Contents - 2 */}
-          <div className="flex flex-col gap-y-2 justify-start mt-[20px] w-[655px] -mr-1">
+          <div className="flex flex-col gap-y-2 md:justify-start mt-[20px] md:w-[685px] md:mr-[50px]">
             {content.map((item, index) => (
-              <div key={index} className="flex flex-col text-[18px] mb-4">
+              <div key={index} className="flex flex-col text-[18px] mb-4 max-sm:ml-[105px] max-sm:w-[355px]">
                 <h1 className="font-Blinker font-bold">
                   {item.title}
                 </h1>
@@ -285,19 +277,19 @@ const Blog_section = () => {
             ))}
 
             {/*Conclusion*/}
-            <h3 className="mt-5 -mb-3 font-Blinker font-bold text-xl ">
+            <h3 className="mt-5 -mb-3 font-Blinker font-bold text-xl max-sm:ml-[105px]">
               Conclusion
             </h3>
-            <p className="text-[#828282] font-Blinker font-normal">
+            <p className="text-[#828282] font-Blinker font-normal text-[18px] max-sm:ml-[105px] max-sm:w-[355px]">
               Starting a new business is a challenging yet rewarding journey. By recognizing the key reasons why many startups fail and implementing strategies to prevent these issues, you can significantly improve your odds of success. Careful planning, customer engagement, and a willingness to adapt are crucial components in building a thriving business.
             </p>
           </div>
         </div>
 
         {/* second div */}
-        <div ref={rightSectionRef} className={`flex flex-col mt-[130px] ml-12 gap-y-32 ${isSticky ? 'sticky top-[100px]' : ''}`}>
+        <div  className="flex flex-col mt-[130px] ml-12 md:gap-y-32">
           {/* Information */}
-          <div className="border-[#D9D9D9] w-72 h-[505px] border-[2px] flex flex-col items-center justify-center">
+          <div className="border-[#D9D9D9] w-72 h-[505px] border-[2px] flex flex-col items-center justify-center max-sm:ml-[165px]">
             <img src={author} alt="" className="rounded-full h-32 w-32" />
             <h1 className="text-black font-Blinker font-normal mt-3">Ashutosh K Pandey</h1>
             <h1 className="text-black font-Blinker font-normal">Growth Marketing Consultant</h1>
@@ -308,7 +300,7 @@ const Blog_section = () => {
           </div>
 
           {/* Categories */}
-          <div className="flex flex-col mt-6">
+          <div className="flex flex-col md:mt-6 max-sm:w-72 max-sm:ml-[165px] max-sm:mt-6">
             <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">Categories</h1>
             <div className="flex flex-col">
               {categories.map((item, index) => (
@@ -321,7 +313,7 @@ const Blog_section = () => {
           </div>
 
           {/* Latest post */}
-          <div className="flex flex-col mt-[65px]">
+          <div className="flex flex-col md:mt-[65px] max-sm:ml-[165px] max-sm:w-72 max-sm:mt-6">
             <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">Latest Post</h1>
             <div className="flex flex-col">
               {latepost.map((item, index) => (
@@ -337,7 +329,7 @@ const Blog_section = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="flex flex-col mt-[65px] mb-6">
+          <div className="flex flex-col mt-[65px] mb-6 max-sm:ml-[165px] max-sm:mt-6 max-sm:w-72">
             <div className="bg-black text-white font-Blinker font-semibold h-10 pt-2 pl-6">Subscribe Newsletter</div>
             <div className="bg-white border-[#7E7E7E] border-[1px] h-44 flex flex-col w-72 items-start pl-6">
               <p className="font-Blinker font-normal text-black text-[13px] w-56 mt-5">

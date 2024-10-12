@@ -145,13 +145,13 @@ const outboundSalesStrategy = [
     }
 ];
 
-
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center ">
       
-      <div className="bg-introbg w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
+      <div className="bg-outbound_bg w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
+        {/* Intro */}
         <div className="flex flex-col justify-center items-start h-full">
-          <h1 className="text-white font-Blinker text-4xl leading-10 font-normal w-[32rem] mr-[25rem]">
+          <h1 className="text-white font-Blinker text-4xl leading-10 font-normal md:w-[30rem] md:mr-[38rem] max-sm:ml-6">
           Understanding Outbound Sales: Importance and Strategies for Business Growth
           </h1>
           <div className="flex pt-12">
@@ -161,11 +161,11 @@ const outboundSalesStrategy = [
           </div>
         </div>
       </div>
-      <div className="bg-white flex">
+      <div className="bg-white flex text-[18px]">
         {/* first div */}
-        <div className="flex flex-col mt-[180px] items-center justify-center mb-52">
+        <div className="flex flex-col md:mt-[50px] items-center justify-center mb-52">
           {/* Basic Info */}
-          <div className="flex gap-x-28">
+          <div className="flex md:gap-x-20 max-sm:ml-[20rem] max-sm:grid max-sm:grid-cols-2 md:mr-[100px]">
             {info.map((item, index) => (
               <div key={index} className="flex items-center gap-x-4">
                 <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center">
@@ -179,16 +179,16 @@ const outboundSalesStrategy = [
             ))}
           </div>
           {/* Divider */}
-          <div className="bg-[#828282] h-[1px] w-[43rem] mt-3 mb-3 ml-6"></div>
+          <div className="bg-[#828282] h-[1px] w-[43rem] mt-3 mb-3 mr-12"></div>
           {/* Paragraphs */}
-          <div className="flex flex-col gap-y-3">
-            <p className="font-Blinker font-normal text-[#828282] w-[34rem]">
+          <div className="flex flex-col gap-y-3 md:mr-[50px]">
+            <p className="font-Blinker font-normal text-[#828282] md:w-[43rem]">
             In the ever-evolving landscape of sales and marketing, businesses are continually exploring methods to connect with potential customers. One approach that has stood the test of time is outbound sales. This proactive method of reaching out to prospects can be a game changer for organizations seeking to drive growth and expand their customer base. In this blog, we will delve into what outbound sales is, why it is essential for businesses, and effective strategies to implement an outbound sales process. 
             </p>
           </div>
 
           {/* Contents - 2 */}
-          <div className="flex flex-col gap-y-5 justify-start mt-[40px] w-[500px] mr-[50px] font-Blinker">
+          <div className="fflex flex-col gap-y-2 justify-start mt-[20px] md:w-[685px] md:mr-[50px]">
             {/* Outbound Sales */}
 
             {/* What is Outbound sales */}
@@ -240,7 +240,7 @@ const outboundSalesStrategy = [
             
 
             {/*Conclusion*/}
-            <h3 className="mt-8 -mb-3 font-Blinker font-bold text-xl ">Conclusion</h3>
+            <h3 className="mt-5 -mb-1 font-Blinker font-bold text-xl">Conclusion</h3>
             <p className="text-[#828282] font-Blinker font-normal">
             Outbound sales is a vital component of any successful business strategy. By proactively reaching out to potential customers, businesses can expand their market reach, accelerate customer acquisition, and build meaningful relationships. With a well-defined target list, personalized messaging, and effective training, organizations can harness the power of outbound sales to drive growth and achieve their goals. As the business landscape continues to evolve, integrating outbound sales into your overall strategy will remain essential for thriving in a competitive environment.
             </p>
@@ -250,15 +250,13 @@ const outboundSalesStrategy = [
         {/* second div */}
         <div className="flex flex-col mt-[130px] ml-12 gap-y-32">
           {/*Information*/}
-          <div className="border-[#D9D9D9] w-72 h-96 border-[2px] flex flex-col items-center justify-center">
+          <div className="border-[#D9D9D9] w-72 h-[505px] border-[2px] flex flex-col items-center justify-center">
             <img src={author} alt="" className="rounded-full h-32 w-32" />
-            <h1 className="text-black font-Blinker font-normal mt-3">
-            Ashutosh K Pandey 
-            </h1>
+            <h1 className="text-black font-Blinker font-normal mt-3">Ashutosh K Pandey</h1>
             <h1 className="text-black font-Blinker font-normal">Growth Marketing Consultant</h1>
             <div className="bg-[#828282] h-[1px] w-[12rem] mt-7 mb-3"></div>
-            <h1 className="text-black font-Blinker font-normal">
-              About Author
+            <h1 className="text-black font-Blinker font-normal md:text-[14px] w-56 text-center">
+              With 17 years in demand generation and sales, I’ve helped tech startups grow by identifying markets and understanding customer needs. On this blog, I share insights to help founders and marketers scale their businesses.
             </h1>
           </div>
           <div>

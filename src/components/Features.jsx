@@ -33,8 +33,8 @@ const Features = () => {
   ];
 
   return (
-    <div className="bg-white w-screen mt-10 flex justify-center items-center overflow-x-hidden md:mb-6 ">
-      <div className="flex flex-row max-sm:flex-col max-sm:gap-y-5 justify-center items-center res-width gap-x-5 max-sm:mr-6 h-72">
+    <div className="bg-white w-screen max-sm:mt-6 md:mt-10 flex justify-center items-center overflow-x-hidden md:mb-6">
+      <div className="flex flex-row max-sm:flex-col max-sm:gap-y-5 justify-center items-center res-width gap-x-5 max-sm:mr-6 md:h-72">
         {features.map((item, index) => (
           <div
             key={index}

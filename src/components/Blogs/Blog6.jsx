@@ -1,4 +1,3 @@
-import Navbar from "../Navbar.jsx";
 import Footer from "../Footer.jsx";
 import { FaRegCalendarAlt, FaTag } from "react-icons/fa";
 import author from "../../../public/assets/author.png"
@@ -154,25 +153,24 @@ const Blog_section = () => {
             desc: "Reevaluate your business model to ensure it supports scalability. Consider subscription models, digital platforms, or other innovative approaches."
         }
     ];
-
     return (
         <div className="flex flex-col items-center justify-center">
-            <div className="bg-scale_growth_bg w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
-                 {/* Intro */}
-                <div className="flex flex-col justify-center items-start h-full">
+            <div className="bg-scale_growth_bg w-full xl:w-[99.2vw] bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
+                {/* Intro */}
+                <div className="res-width3 flex flex-col justify-center items-start h-full">
                     <h1 className="text-black font-Blinker text-4xl leading-10 font-normal md:w-[30rem] md:mr-[38rem] max-sm:ml-6">
                         Understanding the Difference Between Scale and Growth: <br />A Comprehensive Guide
                     </h1>
                 </div>
             </div>
-            <div className="bg-white flex">
+            <div className="bg-white flex max-md:flex-col justify-between res-width3 mt-[5rem] mb-52">
                 {/* first div */}
-                <div className="flex flex-col md:mt-[50px] items-center justify-center mb-52">
+                <div className="flex flex-col items-center justify-center md:w-[70%]">
                     {/* Basic Info */}
-                    <div className="flex md:gap-x-20 max-sm:ml-[20rem] max-sm:grid max-sm:grid-cols-2 md:mr-[100px]">
+                    <div className="flex w-full flex-wrap gap-4 justify-between md:pr-[2rem] lg:pr-[4rem] md:pl-[0.2rem]">
                         {info.map((item, index) => (
                             <div key={index} className="flex items-center gap-x-4">
-                                <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center">
+                                <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center max-sm:h-9 max-sm:w-9">
                                     {item.icon}
                                 </div>
                                 {/* Content to the right of the icon */}
@@ -183,24 +181,26 @@ const Blog_section = () => {
                         ))}
                     </div>
                     {/* Divider */}
-                    <div className="bg-[#828282] h-[1px] w-[43rem] mt-3 mb-3 mr-12"></div>
+                    <div className="w-full">
+                        <div className="bg-[#828282] h-[1px] w-full md:w-[90%] mt-3 mb-4"></div>
+                    </div>
                     {/* Paragraphs */}
-                    <div className="flex flex-col gap-y-3 md:mr-[50px] text-[18px]">
-                        <p className="font-Blinker font-normal text-[#828282] md:w-[43rem] ">
+                    <div className="flex flex-col gap-y-3 w-full">
+                        <p className="md:w-[92%] font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
                             <p>In the realm of business, the terms <strong>scale</strong> and <strong>growth</strong> are often used interchangeably, but they represent fundamentally different concepts. Understanding the distinction between these two terms is crucial for entrepreneurs, business leaders, and investors alike. In this blog, we'll explore the definitions of scale and growth, their differences, and the implications for business strategy.</p>
 
                         </p>
                     </div>
 
                     {/* Contents - 2 */}
-                    <div className="flex flex-col gap-y-5 justify-start mt-[40px] w-[690px] mr-[48px] font-Blinker text-[18px]">
+                    <div className="w-[100%] flex flex-col gap-y-2  mt-[20px] max-sm:text-[14px]">
                         {/* Defining Growth */}
-                        <section className="flex flex-col">
-                            <h2 className="font-bold text-3xl">Defining Growth</h2>
+                        <section className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                            <h2 className="font-bold md:text-3xl max-sm:text-[24px]">Defining Growth</h2>
                             <h3 className="font-semibold mt-3">What is Growth ?</h3>
                             <h4 className="font-normal text-[#828282]">Growth refers to an increase in a company's revenue, profit, or market share over time. It is typically measured by various financial metrics, such as:
                             </h4>
-                            <div className="flex flex-col mt-4 ml-3">
+                            <div className="flex flex-col mt-4">
                                 <ul className="list-disc pl-5">
                                     {growthMetrics.map((item, index) => (
                                         <li key={index} className="mb-2">
@@ -212,8 +212,8 @@ const Blog_section = () => {
                             </div>
 
                             {/* Characteristics of Growth */}
-                            <h3 className="font-semibold mt-3">Characteristics of Growth</h3>
-                            <div className="flex flex-col mt-4 ml-5"> {/* Added margin-top for spacing */}
+                            <h3 className="font-semibold mt-3 ">Characteristics of Growth</h3>
+                            <div className="flex flex-col mt-4 ml-5 max-sm:w-[335px]"> {/* Added margin-top for spacing */}
                                 {growthCharacteristics.map((item, index) => (
                                     <div key={index} className="flex flex-col items-start mb-2"> {/* Added items-start and margin-bottom for spacing */}
                                         <h5 className="font-semibold">{index + 1}. {item.title}</h5> {/* Added font-semibold for consistent styling */}
@@ -224,7 +224,7 @@ const Blog_section = () => {
 
                             <div className="flex flex-col mt-4">
                                 <h2 className="font-semibold text-xl mb-4">Examples of Growth</h2>
-                                <ul className="list-disc pl-5">
+                                <ul className="list-disc pl-5 max-sm:w-[335px]">
                                     <li className="mb-2">
                                         <p className="text-[#828282] font-Blinker font-normal"><strong>A restaurant increased its sales by 20%</strong> over the previous year by improving its menu and customer service.</p>
                                     </li>
@@ -238,15 +238,15 @@ const Blog_section = () => {
                         </section>
 
                         {/* Defining Scale */}
-                        <section className="flex flex-col">
-                            <h2 className="font-bold text-3xl">Defining Scale</h2>
+                        <section className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                            <h2 className="font-bold md:text-3xl max-sm:text-[24px]">Defining Scale</h2>
                             <h3 className="font-semibold mt-3 text-xl">What is Scale ?</h3>
-                            <h4 className="font-normal text-[#828282]">Scaling, on the other hand, refers to a company's ability to increase its revenue at a faster rate than its costs. It involves optimizing operations so that additional resources are not required in proportion to the revenue generated. In essence, scaling means achieving greater output or efficiency without a corresponding increase in input.
+                            <h4 className="font-normal text-[#828282] max-sm:w-[335px]">Scaling, on the other hand, refers to a company's ability to increase its revenue at a faster rate than its costs. It involves optimizing operations so that additional resources are not required in proportion to the revenue generated. In essence, scaling means achieving greater output or efficiency without a corresponding increase in input.
                             </h4>
 
                             {/* Characteristics of Scale */}
                             <h3 className="font-semibold mt-3 text-xl">Characteristics of Scale</h3>
-                            <div className="flex flex-col mt-4 ml-5"> {/* Added margin-top for spacing */}
+                            <div className="flex flex-col mt-4 md:ml-5 max-sm:w-[335px] max-sm:ml-2"> {/* Added margin-top for spacing */}
                                 {scaleMetrics.map((item, index) => (
                                     <div key={index} className="flex flex-col items-start mb-2"> {/* Added items-start and margin-bottom for spacing */}
                                         <h5 className="font-semibold">{index + 1}. {item.title}</h5> {/* Added font-semibold for consistent styling */}
@@ -257,8 +257,8 @@ const Blog_section = () => {
 
                             {/* Examples of Scale */}
                             <div className="flex flex-col mt-4">
-                                <h2 className="font-semibold text-xl mb-4">Examples of Scale</h2>
-                                <ul className="list-disc pl-5">
+                                <h2 className="font-semibold md:text-xl mb-4">Examples of Scale</h2>
+                                <ul className="list-disc pl-5 max-sm:w-[335px]">
                                     <li className="mb-2">
                                         <p className="text-[#828282] font-Blinker font-normal"><strong>A cloud-based software company</strong> that can onboard thousands of new customers with minimal incremental costs, as its infrastructure supports growth without significant investment.
                                         </p>
@@ -271,10 +271,10 @@ const Blog_section = () => {
                             </div>
 
                             {/* Key Differences Between Scale and Growth */}
-                            <div className="flex flex-col text-[18px]">
+                            <div className="flex flex-col md:text-[18px] max-sm:text-[12px]">
                                 <h6 className="text-xl font-semibold mt-4">Key Differences Between Scale and Growth</h6>
                                 <div className="overflow-x-auto mt-4">
-                                    <table className="min-w-full table-auto border-collapse border border-gray-300">
+                                    <table className="min-w-full table-auto border-collapse border border-gray-300 ">
                                         <thead className="bg-gray-100">
                                             <tr>
                                                 <th className="px-4 py-2 border border-gray-300 text-left font-semibold">Aspect</th>
@@ -314,10 +314,10 @@ const Blog_section = () => {
                             </div>
 
                             {/* Understanding the Difference Matters */}
-                            <div className="flex flex-col mt-8">
-                                <h2 className="font-semibold text-xl mb-4">Why Understanding the Difference Matters</h2>
+                            <div className="flex flex-col mt-8 max-sm:text-[14px]">
+                                <h2 className="font-semibold md:text-xl mb-4">Why Understanding the Difference Matters</h2>
                                 {differenceMatters.map((item, index) => (
-                                    <div key={index} className="mb-4">
+                                    <div key={index} className="mb-4 max-sm:w-[335px]">
                                         <h5 className="font-semibold mb-1">{index + 1}. {item.title}</h5>
                                         <p className="text-[#828282] font-Blinker font-normal ml-3">{item.desc}</p>
                                     </div>
@@ -325,12 +325,12 @@ const Blog_section = () => {
                             </div>
 
                             {/* Transition from Growth to Scale */}
-                            <div className="flex flex-col mt-4">
-                                <h2 className="font-semibold text-xl mb-4 text-[18px]">How to Transition from Growth to Scale</h2>
-                                <p className="font-normal text-[#828282] text-[18px]">For businesses looking to transition from a growth phase to a scalable model, consider the following steps:
+                            <div className="flex flex-col mt-4 max-sm:text-[14px]">
+                                <h2 className="font-semibold text-xl mb-4 md:text-[18px]">How to Transition from Growth to Scale</h2>
+                                <p className="font-normal text-[#828282] md:text-[18px] max-sm:w-[335px]">For businesses looking to transition from a growth phase to a scalable model, consider the following steps:
                                 </p>
                                 {transitionSteps.map((item, index) => (
-                                    <div key={index} className="mb-2 mt-2">
+                                    <div key={index} className="mb-2 mt-2 max-sm:w-[335px]">
                                         <h5 className="font-semibold mb-1 text-[18px]">{index + 1}. {item.title}</h5>
                                         <p className="text-[#828282] font-Blinker font-normal ml-3 text-[18px]">{item.desc}</p>
                                     </div>
@@ -339,8 +339,8 @@ const Blog_section = () => {
                         </section>
 
                         {/*Conclusion*/}
-                        <h3 className="mt-4 -mb-3 font-bold text-xl ">Conclusion</h3>
-                        <p className="text-[#828282] font-normal text-[18px]">
+                        <h3 className="md:w-[92%] mt-5 -mb-3 font-Blinker font-bold md:text-xl max-sm:text-[15px]">Conclusion</h3>
+                        <p className="md:w-[92%] text-[#828282] font-Blinker font-normal text-[18px] max-sm:text-[14px]">
                             In summary, understanding the difference between scale and growth is crucial for any business aiming for long-term success. While growth focuses on increasing revenue and customer base, scaling emphasizes efficiency and the ability to expand without proportional increases in costs. By recognizing these distinctions, businesses can implement more effective strategies that not only drive short-term success but also pave the way for sustainable, long-term growth.
 
                         </p>
@@ -348,20 +348,20 @@ const Blog_section = () => {
                 </div>
 
                 {/* second div */}
-                <div className="flex flex-col mt-[130px] ml-12 gap-y-32">
-                    {/*Information*/}
-                    <div className="border-[#D9D9D9] w-72 h-[505px] border-[2px] flex flex-col items-center justify-center">
-            <img src={author} alt="" className="rounded-full h-32 w-32" />
-            <h1 className="text-black font-Blinker font-normal mt-3">Ashutosh K Pandey</h1>
-            <h1 className="text-black font-Blinker font-normal">Growth Marketing Consultant</h1>
-            <div className="bg-[#828282] h-[1px] w-[12rem] mt-7 mb-3"></div>
-            <h1 className="text-black font-Blinker font-normal md:text-[14px] w-56 text-center">
-              With 17 years in demand generation and sales, I’ve helped tech startups grow by identifying markets and understanding customer needs. On this blog, I share insights to help founders and marketers scale their businesses.
-            </h1>
-          </div>
-                    <div>
+                <div className="max-md:mt-[5rem] relative lg:w-[30%]">
+                    <div className="sticky top-[40px] flex flex-col items-center max-md:gap-10">
+                        {/*Information*/}
+                        <div className="border-[#D9D9D9] w-[20rem] md:w-[100%] h-[505px] border-[2px] flex flex-col items-center justify-center">
+                            <img src={author} alt="" className="rounded-full h-32 w-32" />
+                            <h1 className="text-black font-Blinker font-normal mt-3">Ashutosh K Pandey</h1>
+                            <h1 className="text-black font-Blinker font-normal">Growth Marketing Consultant</h1>
+                            <div className="bg-[#828282] h-[1px] w-[12rem] mt-7 mb-3"></div>
+                            <h1 className="text-black font-Blinker font-normal md:text-[14px] w-56 text-center">
+                                With 17 years in demand generation and sales, I’ve helped tech startups grow by identifying markets and understanding customer needs. On this blog, I share insights to help founders and marketers scale their businesses.
+                            </h1>
+                        </div>
                         {/* Categories */}
-                        <div className="flex flex-col mt-6">
+                        <div className="flex flex-col w-[20rem] md:w-[100%] md:mt-6 max-sm:mt-6">
                             <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">
                                 Categories
                             </h1>
@@ -383,7 +383,7 @@ const Blog_section = () => {
                         </div>
 
                         {/* Latest post */}
-                        <div className="flex flex-col mt-6">
+                        <div className="flex flex-col md:mt-[65px] w-[20rem] md:w-[100%] max-sm:mt-6">
                             <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">
                                 Latest Post
                             </h1>
@@ -408,11 +408,11 @@ const Blog_section = () => {
                         </div>
 
                         {/* Newsletter */}
-                        <div className="flex flex-col mt-6 mb-6">
+                        <div className="flex flex-col mt-[65px] mb-6 w-[20rem] md:w-[100%] max-sm:mt-6">
                             <div className="bg-black text-white font-Blinker font-semibold h-10 pt-2 pl-6">
                                 Subscribe Newsletter
                             </div>
-                            <div className="bg-white border-[#7E7E7E] border-[1px] h-44 flex flex-col w-72 items-start pl-6">
+                            <div className="bg-white border-[#7E7E7E] border-[1px] flex flex-col w-[100%] items-start pl-6 pb-6">
                                 <p className="font-Blinker font-normal text-black text-[13px] w-56 mt-5">
                                     Sign up to receive notifications about the latest news and
                                     events from us!

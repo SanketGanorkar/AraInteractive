@@ -2,7 +2,7 @@ import arrow from "../../../public/assets/arrow.png"
 import Footer from "../Footer.jsx";
 import { FaRegCalendarAlt, FaTag } from "react-icons/fa";
 import author from "../../../public/assets/author.png"
-import {Link , useNavigate} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const Blog_section = () => {
   const navigate = useNavigate()
@@ -124,41 +124,42 @@ const Blog_section = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-     
       <div className="bg-start_busi_bg w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
-        <div className="flex flex-col justify-center items-start h-full">
+        <div className="res-width3 flex flex-col justify-center items-start h-full">
           <h1 className="text-white font-Blinker text-4xl leading-10 font-normal w-[22rem] mr-[38rem]">
             Starting a Business: How to Go Prepared
           </h1>
           <div className="flex pt-12">
-            <h2 className="text-white text-xl -mt-1 cursor-pointer" onClick={()=>navigate('/')}>Home</h2>
-            <img src={arrow} alt="arrow" className="w-10 h-6 ml-3"/>
-            <h4 className="text-white -mt-1 ml-3 text-xl cursor-pointer" onClick={()=>navigate('/blogs/How to Run a Services Business Successfully')}>How to Run a Services Business Successfully</h4>
+            <h2 className="text-white text-xl -mt-1 cursor-pointer" onClick={() => navigate('/')}>Home</h2>
+            <img src={arrow} alt="arrow" className="w-10 h-6 ml-3" />
+            <h4 className="text-white -mt-1 ml-3 text-xl cursor-pointer" onClick={() => navigate('/blogs/How to Run a Services Business Successfully')}>How to Run a Services Business Successfully</h4>
           </div>
         </div>
       </div>
-      <div className="bg-white flex">
+      <div className="res-width3 bg-white flex mb-52 mt-[100px] max-md:flex-col">
         {/* first div */}
-        <div className="flex flex-col mt-[180px] items-center justify-center mb-52">
+        <div className="flex flex-col justify-center md:w-[70%]">
           {/* Basic Info */}
-          <div className="flex gap-x-28">
+          <div className="flex w-full md:w-[92%] flex-wrap gap-4 justify-between">
             {info.map((item, index) => (
               <div key={index} className="flex items-center gap-x-4">
-                <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center">
+                <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center max-sm:h-9 max-sm:w-9">
                   {item.icon}
                 </div>
                 {/* Content to the right of the icon */}
-                <h1 className="font-Blinker font-normal text-[#828282]">
+                <h1 className="font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
                   {item.content}
                 </h1>
               </div>
             ))}
           </div>
           {/* Divider */}
-          <div className="bg-[#828282] h-[1px] w-[43rem] mt-3 mb-3 ml-6"></div>
+          <div className="w-full">
+            <div className="bg-[#828282] h-[1px] w-full md:w-[90%] mt-3 mb-4"></div>
+          </div>
           {/* Paragraphs */}
-          <div className="flex flex-col gap-y-3">
-            <p className="font-Blinker font-normal text-[#828282] w-[34rem]">
+          <div className="flex flex-col gap-y-3 w-full">
+            <p className="md:w-[92%] font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
               Starting a business is an exciting and challenging venture that
               requires careful planning and preparation. Whether you’re
               launching a startup or transitioning from a side hustle to a
@@ -169,9 +170,9 @@ const Blog_section = () => {
           </div>
 
           {/* Contents - 2 */}
-          <div className="flex flex-col gap-y-5 justify-start mt-[80px] w-96 mr-[150px]">
+          <div className="w-[100%] flex flex-col gap-y-2  mt-[20px] max-sm:text-[14px]">
             {content.map((item, index) => (
-              <div key={index} className="flex flex-col text-[18px]">
+              <div key={index} className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
                 <h1 className="font-Blinker font-bold">
                   {item.id} . {item.title}
                 </h1>
@@ -181,8 +182,8 @@ const Blog_section = () => {
               </div>
             ))}
             {/*Conclusion*/}
-            <h3 className="mt-8 -mb-3 font-Blinker font-bold text-xl ">Conclusion</h3>
-            <p className="text-[#828282] font-Blinker font-normal text-[18px]">
+            <h3 className="md:w-[92%] mt-5 -mb-3 font-Blinker font-bold md:text-xl max-sm:text-[15px]">Conclusion</h3>
+            <p className="md:w-[92%] text-[#828282] font-Blinker font-normal text-[18px] max-sm:text-[14px]">
               Starting a business requires careful preparation and strategic
               thinking. By conducting thorough market research, creating a solid
               business plan, establishing a strong brand identity, and setting
@@ -196,20 +197,20 @@ const Blog_section = () => {
         </div>
 
         {/* second div */}
-        <div className="flex flex-col mt-[130px] ml-12 gap-y-32">
-          {/*Information*/}
-          <div className="border-[#D9D9D9] w-72 h-[505px] border-[2px] flex flex-col items-center justify-center">
-            <img src={author} alt="" className="rounded-full h-32 w-32" />
-            <h1 className="text-black font-Blinker font-normal mt-3">Ashutosh K Pandey</h1>
-            <h1 className="text-black font-Blinker font-normal">Growth Marketing Consultant</h1>
-            <div className="bg-[#828282] h-[1px] w-[12rem] mt-7 mb-3"></div>
-            <h1 className="text-black font-Blinker font-normal md:text-[14px] w-56 text-center">
-              With 17 years in demand generation and sales, I’ve helped tech startups grow by identifying markets and understanding customer needs. On this blog, I share insights to help founders and marketers scale their businesses.
-            </h1>
-          </div>
-          <div>
+        <div className="flex flex-col gap-y-32 max-md:mt-24 items-center">
+          <div className="sticky top-[24px]">
+            {/*Information*/}
+            <div className="border-[#D9D9D9] w-[20rem] md:w-[100%] h-[505px] border-[2px] flex flex-col items-center justify-center">
+              <img src={author} alt="" className="rounded-full h-32 w-32" />
+              <h1 className="text-black font-Blinker font-normal mt-3">Ashutosh K Pandey</h1>
+              <h1 className="text-black font-Blinker font-normal">Growth Marketing Consultant</h1>
+              <div className="bg-[#828282] h-[1px] w-[12rem] mt-7 mb-3"></div>
+              <h1 className="text-black font-Blinker font-normal md:text-[14px] w-56 text-center">
+                With 17 years in demand generation and sales, I’ve helped tech startups grow by identifying markets and understanding customer needs. On this blog, I share insights to help founders and marketers scale their businesses.
+              </h1>
+            </div>
             {/* Categories */}
-            <div className="flex flex-col mt-6">
+            <div className="flex flex-col w-[20rem] md:w-[100%] md:mt-6 max-sm:mt-6">
               <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">
                 Categories
               </h1>
@@ -260,7 +261,7 @@ const Blog_section = () => {
               <div className="bg-black text-white font-Blinker font-semibold h-10 pt-2 pl-6">
                 Subscribe Newsletter
               </div>
-              <div className="bg-white border-[#7E7E7E] border-[1px] h-44 flex flex-col w-72 items-start pl-6">
+              <div className="bg-white border-[#7E7E7E] border-[1px] flex flex-col w-[100%] items-start pl-6 pb-6">
                 <p className="font-Blinker font-normal text-black text-[13px] w-56 mt-5">
                   Sign up to receive notifications about the latest news and
                   events from us!

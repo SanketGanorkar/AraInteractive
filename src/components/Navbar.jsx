@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const navigate = useNavigate();
   return (
-    <div className="bg-navbg w-screen min-h-[100px] bg-no-repeat bg-cover overflow-x-hidden flex justify-center items-center">
+    <div className="bg-navbg min-h-[100px] bg-no-repeat bg-cover overflow-x-hidden flex justify-center items-center">
       <div className="res-width flex flex-row items-center justify-between gap-x-16">
         {/* Logo and Heading */}
         <div className="flex flex-col">

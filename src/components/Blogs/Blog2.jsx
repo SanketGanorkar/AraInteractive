@@ -2,7 +2,7 @@ import arrow from "../../../public/assets/arrow.png"
 import Footer from "../Footer.jsx";
 import { FaRegCalendarAlt, FaTag } from "react-icons/fa";
 import author from "../../../public/assets/author.png";
-import {Link , useNavigate} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const Blog_section = () => {
   const navigate = useNavigate()
@@ -72,213 +72,199 @@ const Blog_section = () => {
   const content = [
     {
       id: 1,
-      title: "Inflexibility",
-      problem:
-        "Businesses that are resistant to change often miss out on growth opportunities and fail to adapt to market demands.",
-      solution:
-        "Stay informed about industry trends and be open to pivoting your strategies as needed. Flexibility is key to thriving in a dynamic business environment.",
+      title: "Define Your Target Audience",
+      content: "Identify who your ideal customers are. Develop a detailed buyer persona that includes demographics such as age, gender, location, income, and interests. This clarity will help you tailor your marketing efforts more effectively."
     },
     {
       id: 2,
-      title: "Insufficient Planning",
-      problem:
-        "Jumping into a business without a solid plan can lead to poor decision-making and unforeseen obstacles.",
-      solution:
-        "Create a comprehensive business plan that outlines your goals, target market, and financial projections. Regularly review and adjust your plan as circumstances change.",
+      title: "Uncover Pain Points",
+      content: "Discover the challenges your potential customers face. Engaging with your audience through surveys or direct conversations can reveal their pain points. Understanding these issues will enable you to position your product as a solution."
     },
     {
       id: 3,
-      title: "Underestimating the Commitment Required for Success",
-      problem:
-        "Many entrepreneurs are unprepared for the time and effort needed to build a successful business, leading to burnout.",
-      solution:
-        "Set realistic expectations about your workload and be ready for a long-term commitment. Surround yourself with a supportive network to share the journey.",
+      title: "Identify the Outcome or Experience",
+      content: "Envision what your customer’s experience will be like after using your product. What emotions will they feel, and what tangible results will they achieve? This insight helps you market your product as the ideal solution."
     },
     {
       id: 4,
-      title: "Cash Flow Challenges",
-      problem:
-        "Insufficient cash flow can cripple a business, making it difficult to manage day-to-day operations.",
-      solution:
-        "Monitor your cash flow closely by maintaining a detailed budget and using accounting tools. Anticipate expenses and plan for fluctuations in revenue.",
+      title: "Research Competitive Alternatives",
+      content: "Analyze your competitors to understand their strengths and weaknesses. Look beyond direct competitors to include brands that offer alternative solutions to the same target audience. This research will help you find your niche."
     },
     {
       id: 5,
-      title: "Ineffective Management",
-      problem:
-        "Lack of management experience can lead to inefficiencies and missed opportunities.",
-      solution:
-        "Invest in management training or hire experienced professionals. Build a strong team that brings diverse skills to the table.",
+      title: "Differentiate and Find Your Competitive Edge",
+      content: "Identify what sets your brand apart. Effective differentiation is crucial for capturing the attention of your target audience. Focus on the unique benefits that your product offers compared to competitors."
     },
     {
       id: 6,
-      title: "Neglecting Customer Needs",
-      problem:
-        "Businesses that overlook the importance of their customers risk losing them to competitors.",
-      solution:
-        "Engage with customers regularly through feedback surveys and social media. Build strong relationships by understanding and addressing their needs.",
+      title: "Evaluate for Clarity and Credibility",
+      content: "Ensure your positioning statement is clear, concise, and impactful. A well-crafted statement should serve as a guiding principle for your marketing strategies and should evolve as your business grows"
+    }
+  ];
+
+  const examples = [
+    {
+      id: 1,
+      title: "Starbucks",
+      tagline: "Authentic coffee, great experience, and quick delivery.",
+      whyitworks: "Evolved from focusing solely on coffee to creating a customer-centric experience."
+    },
+    {
+      id: 2,
+      title: "Tesla",
+      tagline: "The only stylish car that can go from 0 to 100 in 3 seconds without a drop of oil.",
+      whyitworks: "Engaging language fosters brand loyalty and highlights eco-friendliness."
+    },
+    {
+      id: 3,
+      title: "Amazon",
+      tagline: "Our vision is to be the earth’s most customer-centric company, to build a place where people can find and discover anything they might want to buy online.",
+      whyitworks: "Unique selling points emphasize customer satisfaction and product diversity."
+    },
+    {
+      id: 4,
+      title: "Nestle",
+      tagline: "Produce affordable, safe, and high-quality nutrition for everyone, regardless of their income level.",
+      whyitworks: "Communicates core values while targeting a broad audience."
+    },
+    {
+      id: 5,
+      title: "Airbnb",
+      tagline: "For local and international travelers, Airbnb connects you to unique experiences worldwide",
+      whyitworks: " Targets a specific niche by promoting unique, personalized travel experiences."
+    },
+    {
+      id: 6,
+      title: "Nike",
+      tagline: "For athletes needing high-quality, fashionable athletic wear, Nike provides top-performing sports apparel.",
+      whyitworks: "Clear and comprehensive, covering who, what, why, and how."
     },
     {
       id: 7,
-      title: "Staffing Issues",
-      problem:
-        "Hiring the wrong people can drain resources and hurt company morale.",
-      solution:
-        "Implement a thorough recruitment process and focus on creating a positive work culture to retain talent.",
+      title: "Disney",
+      tagline: "For the young and young-at-heart, Walt Disney World is the theme park that best delivers an immersive, magical experience",
+      whyitworks: "Clearly defines the target market and desired brand perception."
     },
     {
       id: 8,
-      title: "Weak Marketing and Sales Strategies",
-      problem:
-        "Even great products can fail without effective marketing and sales approaches.",
-      solution:
-        "Develop a solid marketing plan that includes both digital and traditional strategies. Experiment with different tactics to find what resonates with your target audience.",
+      title: "Spotify",
+      tagline: "Unlocking the potential of human creativity by allowing a million creative artists to live off their art and billions of fans to enjoy and be inspired.",
+      whyitworks: "Addresses the needs of both artists and listeners in the music streaming landscape."
     },
     {
       id: 9,
-      title: "Insufficient Capital",
-      problem:
-        "Many new businesses struggle to secure enough funding, stunting their growth.",
-      solution:
-        "Explore various funding options such as loans, investors, and crowdfunding. Ensure you have adequate capital to sustain operations during the early stages.",
+      title: "Slack",
+      tagline: "Slack is the collaboration hub that brings together the right people, information, and tools to get work done.",
+      whyitworks: "Clearly communicates core benefits and targets a wide range of businesses."
     },
     {
       id: 10,
-      title: "Incorrect Pricing Strategies",
-      problem:
-        "Setting the wrong prices can scare off customers or limit profitability.",
-      solution:
-        "Research your competition and understand your costs to develop a competitive pricing model. Be prepared to adjust your prices based on market feedback.",
+      title: "Apple",
+      tagline: "To bring the best user experience to its customers through innovative hardware, software, and services.",
+      whyitworks: "Focuses on product impact and customer trust, solidifying brand identity."
     },
-    {
-      id: 11,
-      title: "Lack of a Competitive Advantage",
-      problem:
-        "Without differentiation, businesses can struggle to attract and retain customers.",
-      solution:
-        "Identify what sets your product or service apart and emphasize these unique selling points in your marketing efforts.",
-    },
-    {
-      id: 12,
-      title: "Trying to Do It Alone",
-      problem:
-        "Many entrepreneurs believe they must handle everything by themselves, which can lead to overwhelm.",
-      solution:
-        "Build a support network of mentors, peers, and industry professionals who can provide guidance and assistance. Collaboration can enhance your business strategy.",
-    },
-    {
-      id: 13,
-      title: "Scaling Too Quickly",
-      problem:
-        "Rapid growth can strain resources and lead to operational issues.",
-      solution:
-        "Focus on solidifying your foundation before expanding. Scale gradually and ensure your operations can support increased demand.",
-    },
-    {
-      id: 14,
-      title: "Expert Advice",
-      problem: "Many entrepreneurs struggle without expert guidance.",
-      solution:
-        "To enhance your chances of success, consider seeking insights from experienced entrepreneurs or business mentors. Their guidance can help you avoid common pitfalls and navigate challenges effectively.",
-    },
-  ];
-
+  ]
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="bg-pos_elem w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
-        <div className="flex flex-col justify-center items-start h-full">
+    <div className="flex flex-col items-center justify-center font-Blinker">
+      <div className="bg-pos_elem w-screen md:w-[100vw] 2xl:w-[99.2vw] bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
+        <div className="flex flex-col justify-center items-start h-full res-width3">
           <h1 className="text-white font-Blinker text-4xl leading-10 font-normal w-[30rem] mr-[38rem]">
-          How to Write a Positioning Statement
+            How to Write a Positioning Statement
           </h1>
           <div className="flex pt-12">
-            <h2 className="text-white text-xl -mt-1 cursor-pointer" onClick={()=>navigate('/')}>Home</h2>
-            <img src={arrow} alt="arrow" className="w-10 h-6 ml-3"/>
-            <h4 className="text-white -mt-1 ml-3 text-xl cursor-pointer" onClick={()=>navigate('/blogs/Starting a Business: How to Go Prepared')}>Starting a Business: How to Go Prepared</h4>
+            <h2 className="text-white text-xl -mt-1 cursor-pointer" onClick={() => navigate('/')}>Home</h2>
+            <img src={arrow} alt="arrow" className="w-10 h-6 ml-3" />
+            <h4 className="text-white -mt-1 ml-3 text-xl cursor-pointer" onClick={() => navigate('/blogs/Starting a Business: How to Go Prepared')}>Starting a Business: How to Go Prepared</h4>
           </div>
         </div>
       </div>
-      <div className="bg-white flex">
+      <div className="bg-white flex res-width3 pt-[6rem] mb-48 max-md:flex-col max-sm:mt-3">
         {/* first div */}
-        <div className="flex flex-col md:mt-[50px] items-center justify-center mb-52">
+        <div className="flex flex-col items-center justify-center w-full md:w-[70%]">
           {/* Basic Info */}
-          <div className="flex md:gap-x-20 max-sm:ml-[20rem] max-sm:grid max-sm:grid-cols-2 md:mr-[100px]">
+          <div className="flex w-full flex-wrap gap-4 justify-between md:pr-[2rem] lg:pr-[4rem] md:pl-[0.2rem]">
             {info.map((item, index) => (
               <div key={index} className="flex items-center gap-x-4">
-                <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center">
+                <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center max-sm:h-9 max-sm:w-9">
                   {item.icon}
                 </div>
-                {/* Content to the right of the icon */}
-                <h1 className="font-Blinker font-normal text-[#828282]">
+                <h1 className="font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
                   {item.content}
                 </h1>
               </div>
             ))}
           </div>
           {/* Divider */}
-          <div className="bg-[#828282] h-[1px] w-[43rem] mt-3 mb-3 mr-12"></div>
+          <div className="w-full">
+            <div className="bg-[#828282] h-[1px] w-full md:w-[90%] mt-3 mb-4"></div>
+          </div>
           {/* Paragraphs */}
-          <div className="flex flex-col gap-y-3 md:mr-[50px]">
-            <p className="font-Blinker font-normal text-[#828282] w-[34rem]">
-              Launching a new business is an exhilarating endeavor, but it’s
-              important to recognize that many startups face significant hurdles
-              that can lead to failure. By understanding these common pitfalls,
-              aspiring entrepreneurs can better navigate their path to success.
-              Here’s a look at the main reasons new businesses struggle, along
-              with strategies to avoid these challenges.
+          <div className="flex flex-col gap-y-3 w-full">
+            <p className="md:w-[92%] font-Blinker font-normal text-[#828282] max-sm:text-[14px] md:text-[18px]">
+              Creating a compelling positioning statement is essential for defining your brand's place in the market. Here’s a step-by-step guide to help you craft an effective positioning statement:
             </p>
           </div>
 
           {/* Contents - 2 */}
-          <div className="flex flex-col gap-y-2 justify-start md:mt-[20px] md:w-[685px] md:mr-[50px]">
+          <div className="w-[100%] flex flex-col gap-y-2  mt-[20px] max-sm:text-[14px]">
             {content.map((item, index) => (
-              <div key={index} className="flex flex-col text-[18px] mb-4">
+              <div key={index} className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
                 <h1 className="font-Blinker font-bold">
                   {item.id}. {item.title}
                 </h1>
                 <p className="font-Blinker font-normal text-black">
-                  Problem:{" "}
-                  <span className="font-normal text-[#828282]">
-                    {item.problem}
-                  </span>
-                </p>
-                <p className="font-Blinker font-normal text-black">
-                  Solution:{" "}
-                  <span className="font-normal text-[#828282]">
-                    {item.solution}
+                  <span className="font-normal text-[#828282] ">
+                    {item.content}
                   </span>
                 </p>
               </div>
             ))}
+            <div>
+              <h3 className="font-Blinker font-bold md:text-xl max-sm:text-[15px] ">Successful Examples of Positioning Statements</h3>
+
+              <h4 className="text-[#828282] md:text-[18px]">Here are ten examples of iconic brands and their effective positioning statements:</h4>
+
+              <div className="flex flex-col">
+                {examples.map((item, index) => (
+                  <div className="flex flex-col" key={index}>
+                    <h2 className="font-bold md:text-[18px]">{item.id}. {item.title}</h2>
+                      <p className="mt-2 text-[#828282] md:w-[45rem] md:text-[18px]">" {item.tagline} "</p>
+                    <li className="ml-6 text-[#828282] md:text-[18px] md:w-[42rem]"><b>Why it Works</b> : {item.whyitworks}
+                    </li>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+
+            </div>
 
             {/*Conclusion*/}
-            <h3 className="mt-8 -mb-3 font-Blinker font-bold text-xl ">
+            <h3 className="md:w-[92%] mt-5 -mb-3 font-Blinker font-bold md:text-xl max-sm:text-[15px]">
               Conclusion
             </h3>
-            <p className="text-[#828282] font-Blinker font-normal text-[18px]">
-            Starting a new business is a challenging yet rewarding journey. By recognizing the key reasons why many startups fail and implementing strategies to prevent these issues, you can significantly improve your odds of success. Careful planning, customer engagement, and a willingness to adapt are crucial components in building a thriving business.
+            <p className="md:w-[92%] text-[#828282] font-Blinker font-normal text-[18px] max-sm:text-[14px]">
+              By following these steps and using these examples as inspiration, you can create a positioning statement that effectively communicates your brand's unique value and resonates with your target audience.
             </p>
           </div>
         </div>
 
         {/* second div */}
-        <div className="flex flex-col mt-[130px] ml-12 gap-y-32">
-          {/*Information*/}
-          <div className="border-[#D9D9D9] w-72 h-96 border-[2px] flex flex-col items-center justify-center">
-            <img src={author} alt="" className="rounded-full h-32 w-32" />
-            <h1 className="text-black font-Blinker font-normal mt-3">
-              Ashutosh K Pandey
-            </h1>
-            <h1 className="text-black font-Blinker font-normal">
-              Growth Marketing Consultant
-            </h1>
-            <div className="bg-[#828282] h-[1px] w-[12rem] mt-7 mb-3"></div>
-            <h1 className="text-black font-Blinker font-normal">
-              About Author
-            </h1>
-          </div>
-          <div>
+        <div className="max-md:mt-[5rem] relative lg:w-[28%]">
+          <div className="sticky top-[40px] flex flex-col items-center max-md:gap-10">
+            {/*Information*/}
+            <div className="border-[#D9D9D9] w-[20rem] md:w-[100%] h-[505px] border-[2px] flex flex-col items-center justify-center">
+              <img src={author} alt="" className="rounded-full h-32 w-32" />
+              <h1 className="text-black font-Blinker font-normal mt-3">Ashutosh K Pandey</h1>
+              <h1 className="text-black font-Blinker font-normal">Growth Marketing Consultant</h1>
+              <div className="bg-[#828282] h-[1px] w-[12rem] mt-7 mb-3"></div>
+              <h1 className="text-black font-Blinker font-normal md:text-[14px] w-56 text-center">
+                With 17 years in demand generation and sales, I’ve helped tech startups grow by identifying markets and understanding customer needs. On this blog, I share insights to help founders and marketers scale their businesses.
+              </h1>
+            </div>
             {/* Categories */}
-            <div className="flex flex-col mt-6">
+            <div className="flex flex-col w-[20rem] md:w-[100%] md:mt-6 max-sm:mt-6">
               <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">
                 Categories
               </h1>
@@ -300,7 +286,7 @@ const Blog_section = () => {
             </div>
 
             {/* Latest post */}
-            <div className="flex flex-col mt-6">
+            <div className="flex flex-col md:mt-[65px] w-[20rem] md:w-[100%] max-sm:mt-6">
               <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">
                 Latest Post
               </h1>
@@ -325,11 +311,11 @@ const Blog_section = () => {
             </div>
 
             {/* Newsletter */}
-            <div className="flex flex-col mt-6 mb-6">
+            <div className="flex flex-col mt-[65px] mb-6 w-[20rem] md:w-[100%] max-sm:mt-6">
               <div className="bg-black text-white font-Blinker font-semibold h-10 pt-2 pl-6">
                 Subscribe Newsletter
               </div>
-              <div className="bg-white border-[#7E7E7E] border-[1px] h-44 flex flex-col w-72 items-start pl-6">
+              <div className="bg-white border-[#7E7E7E] border-[1px] flex flex-col w-[100%] items-start pl-6 pb-6">
                 <p className="font-Blinker font-normal text-black text-[13px] w-56 mt-5">
                   Sign up to receive notifications about the latest news and
                   events from us!

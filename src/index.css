@@ -9,7 +9,11 @@ body {
 .res-width {
   width: min(90%, 90rem);
 }
+.res-width3 {
+  width: min(90%, 70rem);
+}
 
+<<<<<<< HEAD
 .res-width3 {
   width: min(96%, 70rem);
 }
@@ -24,6 +28,10 @@ body {
 
 .caro-items {
   margin: 0 10px;
+=======
+.res-width2 {
+  height: min(100vh, 50rem);
+>>>>>>> 62b768b45b41b9700ac5f999e4c195516453ad91
 }
 
 @layer base {

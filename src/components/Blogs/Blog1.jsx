@@ -189,10 +189,17 @@ const Blog_section = () => {
 
   return (
     <div className="flex flex-col items-center justify-center font-Blinker">
+<<<<<<< HEAD
       <div className="bg-bus_fail w-full xl:w-[99.2vw] bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
         {/* Intro */}
         <div className="res-width3 flex flex-col justify-center items-start h-full">
           <h1 className="text-white font-Blinker text-4xl leading-10 font-normal md:w-[30rem] md:mr-[38rem] max-sm:ml-6">
+=======
+      <div className="bg-introbg w-[99.2vw] bg-no-repeat bg-cover overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
+        {/* Intro */}
+        <div className="flex flex-col justify-center res-width3 items-start h-full">
+          <h1 className="text-white font-Blinker text-4xl leading-10 font-normal md:w-[30rem] max-sm:ml-6">
+>>>>>>> 62b768b45b41b9700ac5f999e4c195516453ad91
             Reasons Why New Businesses Fail
             <span className="hidden max-sm:inline">
               <br />
@@ -206,6 +213,7 @@ const Blog_section = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <div className="bg-white flex max-md:flex-col justify-between res-width3 md:mt-[5rem] mb-52 max-sm:mt-6">
         {/* first div */}
         <div className="flex flex-col items-center justify-center md:w-[70%]">
@@ -326,6 +334,128 @@ const Blog_section = () => {
             </div>
           </div>
         </div>
+=======
+      <div className="res-width3 flex pt-[6rem] pb-[10rem] justify-between">
+          {/* first div */}
+          <div className="flex flex-col items-center justify-center w-[65%]">
+            <main className="w-full">
+              {/* Basic Info */}
+              <div className="flex md:gap-x-20 max-sm:ml-[20rem] max-sm:grid max-sm:grid-cols-2">
+                {info.map((item, index) => (
+                  <div key={index} className="flex items-center gap-x-4">
+                    <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center">
+                      {item.icon}
+                    </div>
+                    {/* Content to the right of the icon */}
+                    <h1 className="font-Blinker font-normal text-[#828282]">
+                      {item.content}
+                    </h1>
+                  </div>
+                ))}
+              </div>
+              {/* Divider */}
+              <div className="bg-[#828282] h-[1px] w-[85%] mt-3 mb-3 ml-6"></div>
+              {/* Paragraphs */}
+              <div className="flex flex-col gap-y-3 md:mr-[80px] md:ml-[80px]">
+                <p className="font-Blinker font-normal text-[#828282] ">
+                  Launching a new business is an exhilarating endeavor, but it’s
+                  important to recognize that many startups face significant hurdles
+                  that can lead to failure. By understanding these common pitfalls,
+                  aspiring entrepreneurs can better navigate their path to success.
+                  Here’s a look at the main reasons new businesses struggle, along
+                  with strategies to avoid these challenges.
+                </p>
+              </div>
+
+              {/* Contents - 2 */}
+              <div className="flex flex-col gap-y-2 justify-start mt-[20px] -mr-1">
+                {content.map((item, index) => (
+                  <div key={index} className="flex flex-col text-[18px] mb-4">
+                    <h1 className="font-Blinker font-bold">
+                      {item.title}
+                    </h1>
+                    <p className="font-Blinker font-normal text-black">
+                      Problem:{" "}
+                      <span className="font-normal text-[#828282]">
+                        {item.problem}
+                      </span>
+                    </p>
+                    <p className="font-Blinker font-normal text-black">
+                      Solution:{" "}
+                      <span className="font-normal text-[#828282]">
+                        {item.solution}
+                      </span>
+                    </p>
+                  </div>
+                ))}
+
+                {/*Conclusion*/}
+                <h3 className="mt-5 -mb-3 font-Blinker font-bold text-xl ">
+                  Conclusion
+                </h3>
+                <p className="text-[#828282] font-Blinker font-normal">
+                  Starting a new business is a challenging yet rewarding journey. By recognizing the key reasons why many startups fail and implementing strategies to prevent these issues, you can significantly improve your odds of success. Careful planning, customer engagement, and a willingness to adapt are crucial components in building a thriving business.
+                </p>
+              </div>
+            </main>
+          </div>
+
+          {/* second div ${isSticky ? 'sticky top-[100px]' : ''}*/}
+          <div className="w-[30%] relative">
+            <div className="sticky top-[40px] flex flex-col items-center w-full">
+              <div className="border-[#D9D9D9] w-[100%] h-[505px] border-[2px] flex flex-col items-center justify-center">
+                <img src={author} alt="" className="rounded-full h-32 w-32" />
+                <h1 className="text-black font-Blinker font-normal mt-3">Ashutosh K Pandey</h1>
+                <h1 className="text-black font-Blinker font-normal">Growth Marketing Consultant</h1>
+                <div className="bg-[#828282] h-[1px] w-[12rem] mt-7 mb-3"></div>
+                <h1 className="text-black font-Blinker font-normal md:text-[14px] w-56 text-center">
+                  With 17 years in demand generation and sales, I’ve helped tech startups grow by identifying markets and understanding customer needs. On this blog, I share insights to help founders and marketers scale their businesses.
+                </h1>
+              </div>
+
+              {/* Categories */}
+              <div className="flex flex-col mt-6 w-full">
+                <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">Categories</h1>
+                <div className="flex flex-col">
+                  {categories.map((item, index) => (
+                    <div key={index} className="flex justify-between border-[#828282] border-[1px] h-10">
+                      <h3 className="font-Blinker font-normal text-black ml-3 mt-2">{item.title}</h3>
+                      <h4 className="font-Blinker font-normal text-black mr-3 mt-2">{item.page}</h4>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Latest post */}
+              <div className="flex flex-col mt-[65px] w-full">
+                <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">Latest Post</h1>
+                <div className="flex flex-col">
+                  {latepost.map((item, index) => (
+                    <div key={index} className="flex border-[#7E7E7E] border-[1px] h-20 items-center">
+                      <div className="bg-[#D9D9D9] w-12 h-12 ml-6"></div>
+                      <div className="flex flex-col ml-3">
+                        <h5 className="font-Blinker font-normal text-[#828282] text-[13px]">{item.date}</h5>
+                        <h6 className="font-Blinker font-normal text-black text-[13px]">{item.title}</h6>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Newsletter */}
+              <div className="flex flex-col mt-[65px] mb-6 w-full">
+                <div className="bg-black text-white font-Blinker font-semibold h-10 pt-2 pl-6">Subscribe Newsletter</div>
+                <div className="bg-white border-[#7E7E7E] border-[1px] h-44 flex flex-col items-start pl-6">
+                  <p className="font-Blinker font-normal text-black text-[13px] mt-5">
+                    Sign up to receive notifications about the latest news and events from us!
+                  </p>
+                  <input className="border-black border-[1px] rounded-full text-[#828282] w-48 text-[12px] p-1 pl-3 mt-4" placeholder="Email Address" />
+                  <button className="font-Blinker font-normal text-white bg-black p-1 w-48 rounded-full mt-3 text-[13px]">Subscribe Now !!!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+>>>>>>> 62b768b45b41b9700ac5f999e4c195516453ad91
       </div>
       <Footer />
     </div>

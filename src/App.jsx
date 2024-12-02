@@ -21,8 +21,13 @@ import LandingPage from "./components/LandingPage.jsx";
 function App() {
   return (
     <>
+<<<<<<< HEAD
       <BrowserRouter>
         <div>
+=======
+      <BrowserRouter basename="/AraInteractive">
+        <div className="overflowxhidden">
+>>>>>>> 62b768b45b41b9700ac5f999e4c195516453ad91
           <Scroll />
           <Navbar />
           <Routes>

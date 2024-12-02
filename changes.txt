@@ -1,2 +1,0 @@
-scroll effect pause
-blog 2 content change

@@ -1,4 +1,4 @@
-import tick from "../../public/assets/tick.png"
+import tick from "/assets/tick.png"
 const Growth2 = () => {
   const arr = [
     {

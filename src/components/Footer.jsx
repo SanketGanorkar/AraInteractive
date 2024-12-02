@@ -1,7 +1,7 @@
 import { FaXTwitter } from "react-icons/fa6";
 import { LuLinkedin } from "react-icons/lu";
 import { IoLogoInstagram } from "react-icons/io5";
-import ara from "../../public/assets/Ara.png";
+// import ara from "../../assets/Ara.png";
 import {
   Popover,
   PopoverContent,
@@ -9,14 +9,14 @@ import {
 } from "@/components/ui/popover"
 
 import { useState } from "react";
-// import {HashLink as Link} from "react-router-hash-link"
+
 import { Link } from "react-router-dom"
 
 const Footer = () => {
   const [showSubscription, setShowSubscription] = useState(false);
 
   const handleToggleSubscription = () => {
-    setShowSubscription((prev) => !prev); // Toggle visibility
+    setShowSubscription((prev) => !prev);
   };
 
   // const navigate = useNavigate();
@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="flex flex-col">
               {/* Left section */}
               <div className="max-sm:flex flex-col items-start">
-                <img src={ara} alt="" className="max-sm:ml-6"/>
+                <img src="/assets/Ara.png" alt="" className="max-sm:ml-6" />
                 <p className="text-white font-Blinker font-light text-pretty w-[29rem] pt-7 max-sm:ml-7 max-sm:w-[20rem]">
                   We understand that business can be chaotic. That’s where we
                   come in. We’re focused on adding some much-needed balance to
@@ -47,17 +47,17 @@ const Footer = () => {
               {/* Social Media handles */}
               <div className="flex flex-row mt-12 gap-x-3 max-sm:ml-7">
                 <div>
-                  <Link to="https://armouriq.com/" target="_blank">
+                  <Link to="" target="_blank">
                     <FaXTwitter color="white" size={25} className="ml-5 cursor-pointer" />
                   </Link>
                 </div>
                 <div>
-                  <Link to="https://armouriq.com/" target="_blank">
+                  <Link to="https://www.linkedin.com/company/ara-interactive/?viewAsMember=true" target="_blank">
                     <LuLinkedin color="white" size={25} className="ml-5 cursor-pointer" />
                   </Link>
                 </div>
                 <div>
-                  <Link to="https://armouriq.com/" target="_blank">
+                  <Link to="https://www.instagram.com/interactiveara/" target="_blank">
                     <IoLogoInstagram color="white" size={25} className="ml-5 cursor-pointer" />
                   </Link>
                 </div>
@@ -124,8 +124,6 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-
-
             </div>
           </div>
           {/* Copyright */}

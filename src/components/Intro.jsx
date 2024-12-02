@@ -11,9 +11,9 @@ const Intro = () => {
           <p className="text-white font-Blinker font-light pt-5 w-[30rem] max-sm:w-[345px] max-sm:text-[13px] max-sm:mt-3 max-sm:ml-4">
             Transform your business with tailored marketing strategies that drive real results. Partner with us to navigate your growth journey, from market fit to successful scaling. Let’s achieve your goals together!
           </p>
-          <div className="uppercase cursor-pointer bg-[#434c51] p-2 text-white rounded-xl text-[13px] font-bold mb-1 md:hidden flex hover:text-black hover:bg-white w-[130px] ml-3 mt-2">
-            <h3>Plan With Us</h3>
-            <HiArrowLongRight className="mt-1 ml-2" />
+          <div className=" cursor-pointer bg-[#434c51] p-1 text-white rounded-s-3xl rounded-e-3xl text-[13px] font-bold mb-1 flex hover:text-black hover:bg-white w-32 text-center items-center justify-center md:hidden max-sm:ml-3 max-sm:mt-2" onClick={() => window.open('https://calendly.com/ashutosh-armouriq/30min?month=2024-10', '_blank')}>
+           <h3 className="font-medium text-[14px]">Plan With Us</h3>
+           <HiArrowLongRight className="mt-1 ml-2"/>
           </div>
         </div>
       </div>

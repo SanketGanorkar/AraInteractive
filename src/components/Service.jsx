@@ -2,11 +2,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./caraousel.css";
-import market_fit from "../../public/assets/market_fit.png";
-import gtm from "../../public/assets/gtm.png";
-import outbound from "../../public/assets/outbound.png";
-import scaling from "../../public/assets/scaling.png";
-import crm from "../../public/assets/crm.png";
+import market_fit from "/assets/market_fit.png";
+import gtm from "/assets/gtm.png";
+import outbound from "/assets/outbound.png";
+import scaling from "/assets/scaling.png";
+import crm from "/assets/crm.png";
 
 const Services = () => {
   const features = [
@@ -65,7 +65,7 @@ const Services = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 840,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -73,7 +73,7 @@ const Services = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -95,18 +95,38 @@ const Services = () => {
         foster lasting success for your business.
       </h3>
       <div className="w-full md:max-w-6xl py-10 px-5 mx-auto">
-        <Slider {...settings}>
+        {/* <Slider {...settings}>
           {features.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-left p-5 bg-white shadow-lg rounded-lg transition-transform transform hover:shadow-3xl md:mx-4 border border-gray-200 hover:shadow-black"
+              className="flex flex-col items-left p-5 bg-white shadow-lg rounded-lg transition-transform transform hover:shadow-3xl md:mx-4 border border-gray-200 hover:shadow-black md:h-[80vh]"
             >
               <img
                 src={item.pic}
                 alt={item.title}
                 className="w-full h-[170px] object-cover  mx-auto"
               />
-              <h1 className="pt-5 font-Blinker font-semibold text-xl text-left">
+              <h1 className="pt-12 font-Blinker font-semibold text-xl text-left">
+                {item.title}
+              </h1>
+              <p className="pt-3 text-gray-600 font-Blinker font-light leading-5 text-[17px]">
+                {item.content}
+              </p>
+            </div>
+          ))}
+        </Slider> */}
+        <Slider {...settings}>
+          {features.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-left p-5 bg-white shadow-lg rounded-lg transition-transform transform hover:shadow-3xl md:mx-4 border border-gray-200 hover:shadow-black h-[30rem]"
+            >
+              <img
+                src={item.pic}
+                alt={item.title}
+                className="w-full h-[170px] object-cover mx-auto"
+              />
+              <h1 className="pt-12 font-Blinker font-semibold text-xl text-left">
                 {item.title}
               </h1>
               <p className="pt-3 text-gray-600 font-Blinker font-light leading-5 text-[17px]">
@@ -115,6 +135,7 @@ const Services = () => {
             </div>
           ))}
         </Slider>
+
       </div>
     </div>
   );

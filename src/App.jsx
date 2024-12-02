@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Welcome from "./components/Welcome.jsx";
 import Services from "./components/Service.jsx";
@@ -22,8 +21,8 @@ import LandingPage from "./components/LandingPage.jsx";
 function App() {
   return (
     <>
-      <BrowserRouter basename="/AraInteractive">
-        <div className="">
+      <BrowserRouter>
+        <div>
           <Scroll />
           <Navbar />
           <Routes>

@@ -9,26 +9,28 @@ import Direction from "./Direction.jsx";
 import Clients from "./Clients.jsx";
 import Succeed from "./Succeed.jsx";
 import Industries from "./Industries.jsx";
+import Ashutosh from "./Ashutosh.jsx";
 
 const LandingPage = () => {
-    return (
-      <>
-        
-          <div id="home" className="flex flex-col items-center overflow-x-hidden">
-            <Intro/>
-            <Welcome/>
-            <Services/>
-            <Growth1/>
-            <Growth2/>
-            <Succeed/>
-            <Industries/>
-            <Direction/>
-            <Blogs/>
-            <Clients/>
-            <Footer/>
-          </div>
-      </>
-    );
-  };
+  return (
+    <>
 
-  export default LandingPage;
+      <div id="home" className="flex flex-col items-center overflow-x-hidden">
+        <Intro />
+        <Welcome />
+        <Services />
+        {/* <Growth1 /> */}
+        <Ashutosh />
+        <Growth2 />
+        <Succeed />
+        <Industries />
+        <Direction />
+        <Blogs />
+        <Clients />
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default LandingPage;

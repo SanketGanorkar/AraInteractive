@@ -1,8 +1,11 @@
-import arrow from "../../../public/assets/arrow.png"
+import arrow from "/assets/arrow.png"
 import Footer from "../Footer.jsx";
 import { FaRegCalendarAlt, FaTag } from "react-icons/fa";
-import author from "../../../public/assets/author.png"
+import author from "/assets/author.png"
 import { Link, useNavigate } from "react-router-dom"
+import start_busi_bg from "/assets/start_busi_bg.png";
+import serv_busi_bg from "/assets/serv_busi_bg.png";
+import pos_elem_bg from "/assets/pos_elem_bg.png";
 
 
 const Blog_section = () => {
@@ -32,21 +35,16 @@ const Blog_section = () => {
     },
     {
       id: 2,
-      title: "Corporate",
+      title: "Go To Market",
       page: "04",
     },
     {
       id: 3,
-      title: "IT Solutions",
+      title: " Growth Marketing",
       page: "01",
     },
     {
       id: 4,
-      title: "Marketing",
-      page: "01",
-    },
-    {
-      id: 5,
       title: "Startup Consulting",
       page: "05",
     },
@@ -55,18 +53,24 @@ const Blog_section = () => {
   const latepost = [
     {
       id: 1,
-      date: "30 Oct 2024",
-      title: "5 Impactful Elements That",
+      date: "30 Sept 2024",
+      title: "Writing a Positioning Statement",
+      icon: pos_elem_bg,
+      path: '/blogs/How to Write a Positioning Statement'
     },
     {
       id: 2,
-      date: "30 Oct 2024",
-      title: "Revolutionizing The Future Of",
+      date: "7 Oct 2024",
+      title: "Starting a Business",
+      icon: start_busi_bg,
+      path: '/blogs/Starting a Business: How to Go Prepared'
     },
     {
       id: 3,
-      date: "30 Oct 2024",
-      title: "A Guide to Embrace",
+      date: "21 Sept 2024",
+      title: "Runing a Services Business",
+      icon: serv_busi_bg,
+      path: '/blogs/How to Run a Services Business Successfully'
     },
   ];
 
@@ -146,7 +150,7 @@ const Blog_section = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center justify-center font-Blinker">
       <div className="bg-outbound_bg w-full xl:w-[99.2vw] bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
         {/* Intro */}
         <div className="res-width3 flex flex-col justify-center items-start h-full">
@@ -164,17 +168,16 @@ const Blog_section = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white flex max-md:flex-col justify-between res-width3 mt-[5rem] mb-52">
+      <div className="bg-white flex max-md:flex-col justify-between res-width3 max-sm:mt-6 md:mt-[5rem] mb-52">
         {/* first div */}
         <div className="flex flex-col items-center justify-center md:w-[70%]">
           {/* Basic Info */}
-          <div className="flex w-full flex-wrap gap-4 justify-between md:pr-[2rem] lg:pr-[4rem] md:pl-[0.2rem]">
+          <div className="flex w-full max-sm:flex-col max-sm:grid max-sm:grid-cols-2 gap-4 justify-between md:pr-[2rem] lg:pr-[4rem] md:pl-[0.2rem]">
             {info.map((item, index) => (
               <div key={index} className="flex items-center gap-x-4">
                 <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center max-sm:h-9 max-sm:w-9">
                   {item.icon}
                 </div>
-                {/* Content to the right of the icon */}
                 <h1 className="font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
                   {item.content}
                 </h1>
@@ -186,14 +189,14 @@ const Blog_section = () => {
             <div className="bg-[#828282] h-[1px] w-full md:w-[90%] mt-3 mb-4"></div>
           </div>
           {/* Paragraphs */}
-          <div className="flex flex-col gap-y-3 w-full">
-            <p className="md:w-[92%] font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
+          <div className="flex flex-col gap-y-3 w-full max-sm:w-[93%] max-sm:ml-2">
+            <p className="md:w-[92%] font-Blinker font-normal text-[#828282] max-sm:text-[14px] ">
               In the ever-evolving landscape of sales and marketing, businesses are continually exploring methods to connect with potential customers. One approach that has stood the test of time is outbound sales. This proactive method of reaching out to prospects can be a game changer for organizations seeking to drive growth and expand their customer base. In this blog, we will delve into what outbound sales is, why it is essential for businesses, and effective strategies to implement an outbound sales process.
             </p>
           </div>
 
           {/* Contents - 2 */}
-          <div className="w-[100%] flex flex-col gap-y-2  mt-[20px] max-sm:text-[14px]">
+          <div className="w-[100%] flex flex-col gap-y-2  mt-[20px] max-sm:text-[14px] max-sm:w-[93%] max-sm:ml-2">
             {/* Outbound Sales */}
             {/* What is Outbound sales */}
             <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
@@ -243,7 +246,7 @@ const Blog_section = () => {
             </div>
             {/*Conclusion*/}
             <h3 className="mt-5 -mb-1 font-Blinker font-bold md:text-xl text-[14px]">Conclusion</h3>
-            <p className="text-[#828282] font-Blinker font-normal text-[14px] max-sm:w-[335px]">
+            <p className="text-[#828282] font-Blinker font-normal text-[18px]  max-sm:w-[335px]">
               Outbound sales is a vital component of any successful business strategy. By proactively reaching out to potential customers, businesses can expand their market reach, accelerate customer acquisition, and build meaningful relationships. With a well-defined target list, personalized messaging, and effective training, organizations can harness the power of outbound sales to drive growth and achieve their goals. As the business landscape continues to evolve, integrating outbound sales into your overall strategy will remain essential for thriving in a competitive environment.
             </p>
           </div>
@@ -287,23 +290,14 @@ const Blog_section = () => {
 
             {/* Latest post */}
             <div className="flex flex-col md:mt-[65px] w-[20rem] md:w-[100%] max-sm:mt-6">
-              <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">
-                Latest Post
-              </h1>
+              <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">Latest Post</h1>
               <div className="flex flex-col">
                 {latepost.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex border-[#7E7E7E] border-[1px] h-20 items-center"
-                  >
-                    <div className="bg-[#D9D9D9] w-12 h-12 ml-6"></div>
+                  <div key={index} className="flex border-[#7E7E7E] border-[1px] h-20 items-center">
+                    <img src={item.icon} className="w-12 h-12 ml-6" />
                     <div className="flex flex-col ml-3">
-                      <h5 className="font-Blinker font-normal text-[#828282] text-[13px]">
-                        {item.date}
-                      </h5>
-                      <h6 className="font-Blinker font-normal text-black text-[13px]">
-                        {item.title}
-                      </h6>
+                      <h5 className="font-Blinker font-normal text-[#828282] text-[13px]">{item.date}</h5>
+                      <Link to={item.path} className="cursor-pointer font-Blinker font-normal text-black text-[13px]">{item.title}</Link>
                     </div>
                   </div>
                 ))}

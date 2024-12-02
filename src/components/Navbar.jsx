@@ -3,7 +3,7 @@ import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom"
-import ara from "../../public/assets/Ara.png";
+import ara from "/assets/Ara.png";
 
 const Navbar = () => {
   const [visibleMenu, setVisibleMenu] = useState(false);
@@ -37,20 +37,24 @@ const Navbar = () => {
               {/* <a href="#home">Home</a> */}
               <a href="/">Home</a>
             </li>
-            <li className="uppercase cursor-pointer" onClick={()=>navigate('/')}>
+            <li className="uppercase cursor-pointer" onClick={() => navigate('/')}>
               <a href="#services">Services</a>
             </li>
-            <li className="uppercase cursor-pointer" onClick={()=>navigate('/')}>
+            <li className="uppercase cursor-pointer" onClick={() => navigate('/')}>
               <a href="#about">About us</a>
             </li>
             <li className="uppercase cursor-pointer" onClick={() => navigate('/')}>
-            <a href="#blogs">Blogs</a>
+              <a href="#blogs">Blogs</a>
             </li>
           </ul>
-          <div className="uppercase cursor-pointer bg-[#434c51] p-2 text-white rounded-xl text-[13px] font-bold mb-1 max-sm:hidden flex hover:text-black hover:bg-white ">
-           <h3>Plan With Us</h3>
-           <HiArrowLongRight className="mt-1 ml-2"/>
+          <div
+            className="cursor-pointer bg-[#434c51] py-2 px-4 text-white rounded-s-3xl rounded-e-3xl text-[13px] font-bold mb-1 max-sm:hidden flex hover:text-black hover:bg-white text-center items-center justify-center"
+            onClick={() => window.open('https://calendly.com/ashutosh-armouriq/30min?month=2024-10', '_blank')}
+          >
+            <h3 className="font-medium text-[14px] text-nowrap">Plan With Us</h3>
+            <HiArrowLongRight className="mt-1 ml-2" />
           </div>
+
         </div>
       </div>
 

@@ -1,14 +1,14 @@
 import Marquee from "react-fast-marquee";
-import suzie from "../../public/assets/suzie.png";
-import nudgebee from "../../public/assets/nudgebee.png";
-import cashmap from "../../public/assets/cashmap.png";
-import dhenoo from "../../public/assets/dhenoo.png";
-import foodin from "../../public/assets/foodin.png";
-import nautical_staffing from "../../public/assets/nautical_staffing.png";
+import suzie from "/assets/suzie.png";
+import nudgebee from "/assets/nudgebee.png";
+import cashmap from "/assets/cashmap.png";
+import dhenoo from "/assets/dhenoo.png";
+import foodin from "/assets/foodin.png";
+import nautical_staffing from "/assets/nautical_staffing.png";
 
 const Clients = () => {
   return (
-    <div className="bg-white w-full py-10 px-5 flex flex-col justify-center items-center overflow-x-hidden">
+    <div id="clients" className="bg-white w-full py-10 px-5 flex flex-col justify-center items-center overflow-x-hidden">
       {/* <h1 className="font-Blinker font-light">Recognized By The Best</h1> */}
       <h2 className="font-Blinker font-semibold text-4xl">
         Featured Clients

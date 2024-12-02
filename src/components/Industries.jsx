@@ -1,12 +1,12 @@
-import automotive from "../../public/assets/automotive.png";
-import consumer from "../../public/assets/consumer.png";
-import ecom from "../../public/assets/ecom.png";
-import edu_health from "../../public/assets/edu_health.png";
-import energy from "../../public/assets/energy.png";
-import indus from "../../public/assets/indus.png";
-import real_estate from "../../public/assets/real_estate.png";
-import travel from "../../public/assets/travel.png";
-import tech_saas from "../../public/assets/tech_saas.png";
+import automotive from "/assets/automotive.png";
+import consumer from "/assets/consumer.png";
+import ecom from "/assets/ecom.png";
+import edu_health from "/assets/edu_health.png";
+import energy from "/assets/energy.png";
+import indus from "/assets/indus.png";
+import real_estate from "/assets/real_estate.png";
+import travel from "/assets/travel.png";
+import tech_saas from "/assets/tech_saas.png";
 const Industries = () => {
   const info1 = [
     {
@@ -42,12 +42,12 @@ const Industries = () => {
             {info1.map((item, index) => (
               <div className="flex flex-col" key={index}>
                 <div className="flex flex-row">
-                  <img src={item.logo} alt="" />
-                  <h2 className="font-Blinker font-normal ml-3 text-[#4C4C4C] max-sm:text-[14px]">
+                  <img src={item.logo} alt="" className="max-sm:h-6 max-sm:w-6" />
+                  <h2 className="font-Blinker font-normal ml-3 text-[#4C4C4C] max-sm:text-[14px] max-sm:ml-2 max-sm:pt-1">
                     {item.title}
                   </h2>
                 </div>
-                {item.id != 5 && (
+                {item.id != 6 && (
                   <div className="bg-[#A2A2A2] h-[1px] w-80 mt-2"></div>
                 )}
               </div>
@@ -59,13 +59,13 @@ const Industries = () => {
             {info2.map((item, index) => (
               <div className="flex flex-col" key={index}>
                 <div className="flex flex-row">
-                  <img src={item.logo} alt="" />
-                  <h2 className="font-Blinker font-normal ml-3 text-[#4C4C4C] max-sm:text-[14px] mt-1">
+                  <img src={item.logo} alt="" className="max-sm:h-6 max-sm:w-6 max-sm:mt-1" />
+                  <h2 className="font-Blinker font-normal ml-3 text-[#4C4C4C] max-sm:text-[14px] mt-1 max-sm:ml-2 max-sm:pt-1">
                     {item.title}
                   </h2>
                 </div>
                 {item.id != 4 && (
-                  <div className="bg-[#A2A2A2] h-[1px] w-[390px] mt-2"></div>
+                  <div className="bg-[#A2A2A2] h-[1px] w-80 mt-2"></div>
                 )}
               </div>
             ))}
@@ -75,5 +75,4 @@ const Industries = () => {
     </div>
   );
 };
-
 export default Industries;

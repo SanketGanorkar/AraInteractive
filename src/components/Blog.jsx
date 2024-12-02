@@ -1,12 +1,12 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import outbound_bg from "../../public/assets/outbound_bg.png";
-import start_busi_bg from "../../public/assets/start_busi_bg.png";
-import bus_fail_bg from "../../public/assets/bus_fail_bg.png";
-import pos_elem_bg from "../../public/assets/pos_elem_bg.png";
-import scale_growth_bg from "../../public/assets/scale_growth_bg.png";
-import serv_busi_bg from "../../public/assets/serv_busi_bg.png";
+import outbound_bg from "/assets/outbound_bg.png";
+import start_busi_bg from "/assets/start_busi_bg.png";
+import bus_fail_bg from "/assets/bus_fail_bg.png";
+import pos_elem_bg from "/assets/pos_elem_bg.png";
+import scale_growth_bg from "/assets/scale_growth_bg.png";
+import serv_busi_bg from "/assets/serv_busi_bg.png";
 import "./caraousel.css";
 import { Link, useNavigate } from "react-router-dom"
 
@@ -75,7 +75,7 @@ const Blogs = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 840,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -83,7 +83,7 @@ const Blogs = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -106,7 +106,7 @@ const Blogs = () => {
           {features.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-left p-5 bg-white shadow-lg rounded-lg transition-transform transform hover:shadow-3xl hover:shadow-black md:mx-4 border border-gray-200 cursor-pointer"
+              className="caro-items flex flex-col items-left p-5 bg-white shadow-lg rounded-lg transition-transform transform hover:shadow-3xl hover:shadow-black md:mx-4 border border-gray-200 cursor-pointer h-[28rem]"
             >
               <Link to={item.path} className="overflow-hidden">
                 <img

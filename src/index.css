@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  scroll-behavior : smooth;
+body {
+  scroll-behavior: smooth;
 }
+
 .res-width {
   width: min(90%, 90rem);
 }
@@ -13,8 +14,16 @@ body{
   width: min(96%, 70rem);
 }
 
-.res-width2{
-  height: min(100vh,50rem);
+.res-width4 {
+  width: min(96%, 90rem);
+}
+
+.res-width2 {
+  height: min(100vh, 50rem);
+}
+
+.caro-items {
+  margin: 0 10px;
 }
 
 @layer base {
@@ -45,6 +54,7 @@ body{
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -77,8 +87,8 @@ body{
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
-

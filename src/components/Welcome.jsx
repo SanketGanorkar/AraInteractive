@@ -1,58 +1,53 @@
-import welcome from "../../public/assets/welcome.png";
 
 const Welcome = () => {
   return (
-    <div className="flex items-center justify-center bg-[#E7E7E7] w-full" id="about">
-      {/* Left part */}
-      <div className="md:flex max-sm:flex-col justify-between items-center res-width w-full max-sm:pb-12">
-        <img
-          src={welcome}
-          alt="welcome image"
-          className="w-[90%] md:w-[315px] md:h-[398px] max-sm:h-auto mx-auto md:-ml-[63px]"
-        />
-
-        {/* Mid part */}
-        <div className="flex md:flex-row px-3 w-full justify-between max-sm:flex-col">
-          <div className="md:ml-6"> {/* Center text on mobile */}
-            <h1 className="font-Blinker font-extralight text-2xl md:-mt-3">
-              Welcome to ARA Interactive
-            </h1>
-            <h2 className="font-Blinker font-normal text-3xl md:w-[19rem] mt-3 max-sm:w-[90%]">
-              Navigating Your Growth Journey Together
-            </h2>
-            <p className="font-Blinker font-light md:w-[27rem] mt-11 max-sm:w-[90%]">
-              We specialize in crafting bespoke marketing strategies that drive tangible results and sustainable success. Whether you’re just starting out or ready to scale, our expertise will guide you every step of the way.
-            </p>
-            <p className="font-Blinker font-light md:w-[26rem] mt-5 max-sm:w-[90%]">
-              Leverage hundreds of customized insights and tactics, honed from real-world experience, to accelerate your path to success.
-            </p>
-          </div>
-
-          <div className="flex flex-col md:-ml-[98px] max-sm:mt-5">
-            <div className="bg-[#000000A3] h-80 w-[1px] md:mt-3 -ml-6 max-sm:hidden opacity-45 absolute"></div>
-            <div className="md:mt-[30px] md:ml-8">
-              <h1 className="font-Blinker font-normal md:text-4xl max-sm:text-5xl">
-                50+
+    <>
+      <div className="bg-[#E7E7E7] w-screen min-h-[34rem] flex justify-center items-center" id="about">
+        <div className="relative res-width4 h-[100%] flex max-lg:flex-col justify-between">
+          <div className="flex max-md:flex-col gap-6 xl:gap-10 lg:w-[50%] max-lg: items-center">
+            <img
+              src="/assets/welcome.png"
+              alt=""
+              className="h-full max-lg:h-[30rem] object-contain"
+            />
+            <div className="h-full flex flex-col justify-center w-[80%]">
+              <h1 className="font-Blinker font-extralight text-2xl md:-mt-3">
+                Welcome to ARA Interactive
               </h1>
-              <h2 className="md:w-32  max-sm:w-[90%]"> 
-                Growth advice for businesses
+              <h2 className="font-Blinker font-normal text-3xl md:w-[19rem] mt-3">
+                Navigating Your Growth Journey Together
               </h2>
-            </div>
-            <div className="bg-[#000000A3] h-[1px] w-64 md:mt-12 max-sm:mt-6 md:-ml-6"></div>
-            <div className="mt-5 text-center max-sm:text-left"> 
-              <h1 className="md:ml-8 font-Blinker font-semibold text-xl mt-2 text-left">
-                Our Mission
-              </h1>
-              <p className="md:ml-8 w-64 max-sm:w-[80%] max-sm:mt-3 text-left">
-                At ARA Interactive, we empower businesses with tailored
-                marketing strategies that drive sustainable growth and
-                measurable success.
+              <p className="font-Blinker font-light mt-11">
+                We specialize in crafting bespoke marketing strategies that drive tangible results and sustainable success. Whether you’re just starting out or ready to scale, our expertise will guide you every step of the way.
               </p>
+              <p className="font-Blinker font-light mt-5">
+                Leverage hundreds of customized insights and tactics, honed from real-world experience, to accelerate your path to success.
+              </p>
+            </div>
+          </div>
+          <div className="min-h-full flex justify-center relative">
+            <div className="absolute left-0 top-[50%] max-lg:hidden -translate-y-[50%] h-[20rem] w-[1.2px] bg-black" />
+            <div className="min-h-full max-sm:w-[25rem] flex lg:flex-col justify-center items-center max-lg:py-8">
+              <div className="lg:pl-8 lg:pb-8 max-sm:pr-8">
+                <h1 className="font-Blinker font-normal md:text-4xl max-sm:text-5xl">50+</h1>
+                <p className="sm:w-44 max-sm:mt-3 text-left">
+                  Growth advice for businesses
+                </p>
+              </div>
+              <div className="h-[6rem] lg:h-[1.2px] w-[1.2px] lg:w-[20rem] bg-black" />
+              <div className="pl-8 lg:pt-8">
+                <h1 className="font-Blinker font-semibold text-xl text-left">Our Mission</h1>
+                <p className="sm:w-64 max-sm:mt-3 text-left">
+                  At ARA Interactive, we empower businesses with tailored
+                  marketing strategies that drive sustainable growth and
+                  measurable success.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,8 +1,11 @@
-import arrow from "../../../public/assets/arrow.png"
+import arrow from "/assets/arrow.png"
 import Footer from "../Footer.jsx";
 import { FaRegCalendarAlt, FaTag } from "react-icons/fa";
-import author from "../../../public/assets/author.png"
+import author from "/assets/author.png"
 import { Link, useNavigate } from "react-router-dom"
+import start_busi_bg from "/assets/start_busi_bg.png";
+import serv_busi_bg from "/assets/serv_busi_bg.png";
+import pos_elem_bg from "/assets/pos_elem_bg.png";
 const Blog_section = () => {
     const navigate = useNavigate()
     const info = [
@@ -30,21 +33,16 @@ const Blog_section = () => {
         },
         {
             id: 2,
-            title: "Corporate",
+            title: "Go To Market",
             page: "04",
         },
         {
             id: 3,
-            title: "IT Solutions",
+            title: " Growth Marketing",
             page: "01",
         },
         {
             id: 4,
-            title: "Marketing",
-            page: "01",
-        },
-        {
-            id: 5,
             title: "Startup Consulting",
             page: "05",
         },
@@ -53,18 +51,24 @@ const Blog_section = () => {
     const latepost = [
         {
             id: 1,
-            date: "30 Oct 2024",
-            title: "5 Impactful Elements That",
+            date: "30 Sept 2024",
+            title: "Writing a Positioning Statement",
+            icon: pos_elem_bg,
+            path: '/blogs/How to Write a Positioning Statement'
         },
         {
             id: 2,
-            date: "30 Oct 2024",
-            title: "Revolutionizing The Future Of",
+            date: "7 Oct 2024",
+            title: "Starting a Business",
+            icon: start_busi_bg,
+            path: '/blogs/Starting a Business: How to Go Prepared'
         },
         {
             id: 3,
-            date: "30 Oct 2024",
-            title: "A Guide to Embrace",
+            date: "21 Sept 2024",
+            title: "Runing a Services Business",
+            icon: serv_busi_bg,
+            path: '/blogs/How to Run a Services Business Successfully'
         },
     ];
 
@@ -179,7 +183,7 @@ const Blog_section = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center font-Blinker">
             <div className="bg-serv_busi_bg w-full xl:w-[99.2vw] bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
                 {/* Intro */}
                 <div className="res-width3 flex flex-col justify-center items-start h-full">
@@ -195,17 +199,16 @@ const Blog_section = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-white flex max-md:flex-col justify-between res-width3 mt-[5rem] mb-52">
+            <div className="bg-white flex max-md:flex-col justify-between res-width3 max-sm:mt-6 md:mt-[5rem] mb-52">
                 {/* first div */}
                 <div className="flex flex-col items-center justify-center md:w-[70%]">
                     {/* Basic Info */}
-                    <div className="flex w-full flex-wrap gap-4 justify-between md:pr-[2rem] lg:pr-[4rem] md:pl-[0.2rem]">
+                    <div className="flex w-full max-sm:flex-col max-sm:grid max-sm:grid-cols-2 gap-4 justify-between md:pr-[2rem] lg:pr-[4rem] md:pl-[0.2rem]">
                         {info.map((item, index) => (
                             <div key={index} className="flex items-center gap-x-4">
                                 <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center max-sm:h-9 max-sm:w-9">
                                     {item.icon}
                                 </div>
-                                {/* Content to the right of the icon */}
                                 <h1 className="font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
                                     {item.content}
                                 </h1>
@@ -218,7 +221,7 @@ const Blog_section = () => {
                     </div>
                     {/* Paragraphs */}
                     <div className="flex flex-col gap-y-3 w-full">
-                        <p className="md:w-[92%] font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
+                        <p className="max-sm:w-[93%] max-sm:ml-2 md:w-[92%] font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
                             Running a services business can be both fulfilling and demanding. Unlike traditional product-based companies, service-oriented businesses depend heavily on customer relationships, expertise, and the ability to adapt to changing market conditions. To succeed, you must focus on various aspects, including understanding your target market, delivering exceptional service, and creating sustainable business models. This blog will explore essential strategies for running a successful services business, emphasizing crafting a compelling positioning statement, incorporating a subscription model, and developing effective pricing strategies.
                         </p>
                     </div>
@@ -226,7 +229,7 @@ const Blog_section = () => {
                     {/* Contents - 2 */}
                     <div className="w-[100%] flex flex-col gap-y-2  mt-[20px] max-sm:text-[14px]">
                         {/* Understanding Target Market */}
-                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4 max-sm:w-[93%] max-sm:ml-2">
                             <h2 className="font-bold md:text-2xl max-sm:text-[16px]">Understanding Your Target Market</h2>
                             <section className="flex flex-col md:mt-3 max-sm:mt-1">
                                 <h2 className="font-semibold max-sm:text-[14px] md:text-xl">Define Your Audience</h2>
@@ -240,7 +243,7 @@ const Blog_section = () => {
                             </section>
                         </div>
                         {/* Positioning Statement */}
-                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4 max-sm:w-[93%] max-sm:ml-2">
                             <h2 className="font-bold md:text-2xl max-sm:text-[16px]">Crafting a Strong Positioning Statement</h2>
                             <section className="flex flex-col md:mt-3 max-sm:mt-1">
                                 <h2 className="font-semibold md:text-xl max-sm:text-[14px]">What is a Positioning Statement?</h2>
@@ -265,7 +268,7 @@ const Blog_section = () => {
                             </section>
                         </div>
                         {/* Delivering Exceptional Customer Service */}
-                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4 max-sm:w-[93%] max-sm:ml-2">
                             <h2 className="font-bold md:text-2xl max-sm:text-[16px]">Delivering Exceptional Customer Service</h2>
                             <section className="flex flex-col">
                                 <h2 className="font-semibold md:text-xl max-sm:text-[14px]">Customer-Centric Approach
@@ -284,11 +287,11 @@ const Blog_section = () => {
                         </div>
 
                         {/* Subscription Model */}
-                        <h2 className="font-bold md:text-2xl max-sm:ml-[185px] max-sm:text-[16px]">Incorporating a Subscription Model
+                        <h2 className="max-sm:w-[93%] max-sm:ml-2 font-bold md:text-2xl max-sm:text-[16px]">Incorporating a Subscription Model
                         </h2>
 
                         {/* Benefits of a Subscription Model */}
-                        <section className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                        <section className="md:w-[92%] flex flex-col md:text-[18px] mb-4 max-sm:w-[93%] max-sm:ml-2">
                             <h2 className="font-semibold md:text-xl max-sm:text-[16px]">Benefits of a Subscription Model
                             </h2>
                             <p className="text-[#828282] font-Blinker font-normal">A subscription model offers a predictable revenue stream, enhances customer retention, and allows for more streamlined service delivery. By offering services on a subscription basis, you create ongoing relationships with customers, encouraging them to return for more.
@@ -296,21 +299,21 @@ const Blog_section = () => {
                         </section>
 
                         {/* How to Implement a Subscription Model */}
-                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4 max-sm:w-[93%] max-sm:ml-2">
                             <h2 className="font-semibold">How to Implement a Subscription Model
                             </h2>
-                            <div className="flex flex-col mt-1"> 
+                            <div className="flex flex-col mt-1">
                                 {subscription.map((item, index) => (
-                                    <div key={index} className="flex flex-col items-start mb-2 "> 
-                                        <h5 className="font-semibold">{index + 1}. {item.title}</h5> 
-                                        <p className="text-[#828282] font-Blinker font-normal">{item.desc}</p> 
+                                    <div key={index} className="flex flex-col items-start mb-2 ">
+                                        <h5 className="font-semibold">{index + 1}. {item.title}</h5>
+                                        <p className="text-[#828282] font-Blinker font-normal">{item.desc}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
 
                         {/* Pricing Strategies */}
-                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4 max-sm:w-[93%] max-sm:ml-2">
                             <section>
                                 <h2 className="font-bold md:text-2xl max-sm:text-[18px]">Effective Pricing Strategies
                                 </h2>
@@ -346,7 +349,7 @@ const Blog_section = () => {
                         </div>
 
                         {/* Streamlining Operations */}
-                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4 max-sm:w-[93%] max-sm:ml-2">
                             <h2 className="font-bold md:text-2xl max-sm:text-[16px] ">Streamlining Operations</h2>
                             <section className="flex flex-col md:mt-3">
                                 <h2 className="font-semibold md:text-xl">Optimize Processes</h2>
@@ -362,7 +365,7 @@ const Blog_section = () => {
                         </div>
 
                         {/* Investing in Your Team */}
-                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4 max-sm:w-[93%] max-sm:ml-2">
                             <h2 className="font-bold md:text-2xl max-sm:text-[16px]">Investing in Your Team</h2>
                             <section className="flex flex-col md:mt-3">
                                 <h2 className="font-semibold md:text-xl ">Hire the Right People
@@ -382,7 +385,7 @@ const Blog_section = () => {
                         </div>
 
                         {/* Leveraging Technology */}
-                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4 max-sm:w-[93%] max-sm:ml-2">
                             <h2 className="font-bold md:text-2xl max-sm:text-[16px]">Leveraging Technology</h2>
                             <section className="flex flex-col md:mt-3">
                                 <h2 className="font-semibold md:text-xl">Embrace Digital Solutions
@@ -400,7 +403,7 @@ const Blog_section = () => {
                         </div>
 
                         {/* Monitoring Financial Health */}
-                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+                        <div className="md:w-[92%] flex flex-col md:text-[18px] mb-4 max-sm:w-[93%] max-sm:ml-2">
                             <h2 className="font-bold text-2xl  max-sm:text-[16px]">Monitoring Financial Health
                             </h2>
                             <section className="flex flex-col md:mt-3 max-sm:text-[14px]">
@@ -417,8 +420,8 @@ const Blog_section = () => {
                             </section>
                         </div>
                         {/*Conclusion*/}
-                        <h3 className="mt-5 -mb-3 font-Blinker font-bold md:text-xl max-sm:ml-[185px] max-sm:text-[15px] ">Conclusion</h3>
-                        <p className="md:w-[95%] text-[#828282] font-Blinker font-normal text-[18px] max-sm:text-[14px]">
+                        <h3 className="mt-5 -mb-3 font-Blinker font-bold md:text-xl max-sm:text-[15px] max-sm:w-[93%] max-sm:ml-2">Conclusion</h3>
+                        <p className="md:w-[95%] text-[#828282] font-Blinker font-normal text-[18px] max-sm:text-[14px] max-sm:w-[93%] max-sm:ml-2">
                             Running a successful services business requires a multi-faceted approach that encompasses understanding your market, delivering exceptional service, crafting a compelling positioning statement, and implementing sustainable business models like subscriptions. By developing effective pricing strategies, investing in your team, leveraging technology, and continuously seeking feedback, you can build a robust foundation for growth and sustainability. Stay adaptable and committed to your customers, and your services business will not only thrive but also stand out in a competitive landscape.
                         </p>
                     </div>
@@ -441,34 +444,25 @@ const Blog_section = () => {
                         <div className="flex flex-col w-[20rem] md:w-[100%] md:mt-6 max-sm:mt-6">
                             <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">Categories</h1>
                             <div className="flex flex-col">
-                            {categories.map((item, index) => (
-                                <div key={index} className="flex justify-between border-[#828282] border-[1px] h-10">
-                                <h3 className="font-Blinker font-normal text-black ml-3 mt-2">{item.title}</h3>
-                                <h4 className="font-Blinker font-normal text-black mr-3 mt-2">{item.page}</h4>
-                                </div>
-                            ))}
+                                {categories.map((item, index) => (
+                                    <div key={index} className="flex justify-between border-[#828282] border-[1px] h-10">
+                                        <h3 className="font-Blinker font-normal text-black ml-3 mt-2">{item.title}</h3>
+                                        <h4 className="font-Blinker font-normal text-black mr-3 mt-2">{item.page}</h4>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
                         {/* Latest post */}
                         <div className="flex flex-col md:mt-[65px] w-[20rem] md:w-[100%] max-sm:mt-6">
-                            <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">
-                                Latest Post
-                            </h1>
+                            <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">Latest Post</h1>
                             <div className="flex flex-col">
                                 {latepost.map((item, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex border-[#7E7E7E] border-[1px] h-20 items-center"
-                                    >
-                                        <div className="bg-[#D9D9D9] w-12 h-12 ml-6"></div>
+                                    <div key={index} className="flex border-[#7E7E7E] border-[1px] h-20 items-center">
+                                        <img src={item.icon} className="w-12 h-12 ml-6" />
                                         <div className="flex flex-col ml-3">
-                                            <h5 className="font-Blinker font-normal text-[#828282] text-[13px]">
-                                                {item.date}
-                                            </h5>
-                                            <h6 className="font-Blinker font-normal text-black text-[13px]">
-                                                {item.title}
-                                            </h6>
+                                            <h5 className="font-Blinker font-normal text-[#828282] text-[13px]">{item.date}</h5>
+                                            <Link to={item.path} className="cursor-pointer font-Blinker font-normal text-black text-[13px]">{item.title}</Link>
                                         </div>
                                     </div>
                                 ))}

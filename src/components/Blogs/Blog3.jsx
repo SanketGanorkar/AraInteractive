@@ -1,8 +1,11 @@
-import arrow from "../../../public/assets/arrow.png"
+import arrow from "/assets/arrow.png"
 import Footer from "../Footer.jsx";
 import { FaRegCalendarAlt, FaTag } from "react-icons/fa";
-import author from "../../../public/assets/author.png"
+import author from "/assets/author.png"
 import { Link, useNavigate } from "react-router-dom"
+import start_busi_bg from "/assets/start_busi_bg.png";
+import serv_busi_bg from "/assets/serv_busi_bg.png";
+import pos_elem_bg from "/assets/pos_elem_bg.png";
 
 const Blog_section = () => {
   const navigate = useNavigate()
@@ -31,21 +34,16 @@ const Blog_section = () => {
     },
     {
       id: 2,
-      title: "Corporate",
+      title: "Go To Market",
       page: "04",
     },
     {
       id: 3,
-      title: "IT Solutions",
+      title: " Growth Marketing",
       page: "01",
     },
     {
       id: 4,
-      title: "Marketing",
-      page: "01",
-    },
-    {
-      id: 5,
       title: "Startup Consulting",
       page: "05",
     },
@@ -54,18 +52,24 @@ const Blog_section = () => {
   const latepost = [
     {
       id: 1,
-      date: "30 Oct 2024",
-      title: "5 Impactful Elements That",
+      date: "30 Sept 2024",
+      title: "Writing a Positioning Statement",
+      icon: pos_elem_bg,
+      path: '/blogs/How to Write a Positioning Statement'
     },
     {
       id: 2,
-      date: "30 Oct 2024",
-      title: "Revolutionizing The Future Of",
+      date: "7 Oct 2024",
+      title: "Starting a Business",
+      icon: start_busi_bg,
+      path: '/blogs/Starting a Business: How to Go Prepared'
     },
     {
       id: 3,
-      date: "30 Oct 2024",
-      title: "A Guide to Embrace",
+      date: "21 Sept 2024",
+      title: "Runing a Services Business",
+      icon: serv_busi_bg,
+      path: '/blogs/How to Run a Services Business Successfully'
     },
   ];
 
@@ -126,27 +130,26 @@ const Blog_section = () => {
     <div className="flex flex-col items-center justify-center">
       <div className="bg-start_busi_bg w-screen bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
         <div className="res-width3 flex flex-col justify-center items-start h-full">
-          <h1 className="text-white font-Blinker text-4xl leading-10 font-normal w-[22rem] mr-[38rem]">
+          <h1 className="text-white font-Blinker text-4xl leading-10 font-normal w-[22rem] mr-[38rem] max-sm:ml-6">
             Starting a Business: How to Go Prepared
           </h1>
           <div className="flex pt-12">
-            <h2 className="text-white text-xl -mt-1 cursor-pointer" onClick={() => navigate('/')}>Home</h2>
-            <img src={arrow} alt="arrow" className="w-10 h-6 ml-3" />
-            <h4 className="text-white -mt-1 ml-3 text-xl cursor-pointer" onClick={() => navigate('/blogs/How to Run a Services Business Successfully')}>How to Run a Services Business Successfully</h4>
+            <h2 className="text-white text-xl -mt-1 cursor-pointer max-sm:text-[15px] max-sm:ml-7" onClick={() => navigate('/')}>Home</h2>
+            <img src={arrow} alt="arrow" className="md:w-10 md:h-6 md:ml-3 max-sm:w-6 max-sm:h-3 max-sm:mt-1 max-sm:ml-2" />
+            <h4 className="text-white -mt-1  max-sm:ml-2 md:ml-3 text-xl cursor-pointer max-sm:text-[15px]" onClick={() => navigate('/blogs/How to Run a Services Business Successfully')}>How to Run a Services Business Successfully</h4>
           </div>
         </div>
       </div>
-      <div className="res-width3 bg-white flex mb-52 mt-[100px] max-md:flex-col">
+      <div className="res-width3 bg-white flex mb-52 md:mt-[100px] max-md:flex-col max-sm:mt-4">
         {/* first div */}
         <div className="flex flex-col justify-center md:w-[70%]">
           {/* Basic Info */}
-          <div className="flex w-full md:w-[92%] flex-wrap gap-4 justify-between">
+          <div className="flex w-full max-sm:flex-col max-sm:grid max-sm:grid-cols-2 gap-4 justify-between md:pr-[2rem] lg:pr-[4rem] md:pl-[0.2rem]">
             {info.map((item, index) => (
               <div key={index} className="flex items-center gap-x-4">
                 <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center max-sm:h-9 max-sm:w-9">
                   {item.icon}
                 </div>
-                {/* Content to the right of the icon */}
                 <h1 className="font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
                   {item.content}
                 </h1>
@@ -159,7 +162,7 @@ const Blog_section = () => {
           </div>
           {/* Paragraphs */}
           <div className="flex flex-col gap-y-3 w-full">
-            <p className="md:w-[92%] font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
+            <p className="md:w-[92%] font-Blinker font-normal text-[#828282] max-sm:text-[14px] max-sm:w-[93%] max-sm:ml-2">
               Starting a business is an exciting and challenging venture that
               requires careful planning and preparation. Whether you’re
               launching a startup or transitioning from a side hustle to a
@@ -172,7 +175,7 @@ const Blog_section = () => {
           {/* Contents - 2 */}
           <div className="w-[100%] flex flex-col gap-y-2  mt-[20px] max-sm:text-[14px]">
             {content.map((item, index) => (
-              <div key={index} className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
+              <div key={index} className="md:w-[92%] flex flex-col md:text-[18px] mb-4 max-sm:w-[93%] max-sm:ml-2">
                 <h1 className="font-Blinker font-bold">
                   {item.id} . {item.title}
                 </h1>
@@ -182,8 +185,8 @@ const Blog_section = () => {
               </div>
             ))}
             {/*Conclusion*/}
-            <h3 className="md:w-[92%] mt-5 -mb-3 font-Blinker font-bold md:text-xl max-sm:text-[15px]">Conclusion</h3>
-            <p className="md:w-[92%] text-[#828282] font-Blinker font-normal text-[18px] max-sm:text-[14px]">
+            <h3 className="max-sm:w-[93%] max-sm:ml-2 md:w-[92%] mt-5 -mb-3 font-Blinker font-bold md:text-xl max-sm:text-[15px]">Conclusion</h3>
+            <p className=" max-sm:w-[93%] max-sm:ml-2 md:w-[92%] text-[#828282] font-Blinker font-normal text-[18px] max-sm:text-[14px]">
               Starting a business requires careful preparation and strategic
               thinking. By conducting thorough market research, creating a solid
               business plan, establishing a strong brand identity, and setting
@@ -232,24 +235,15 @@ const Blog_section = () => {
             </div>
 
             {/* Latest post */}
-            <div className="flex flex-col mt-6">
-              <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">
-                Latest Post
-              </h1>
+            <div className="flex flex-col md:mt-[65px] w-[20rem] md:w-[100%] max-sm:mt-6">
+              <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">Latest Post</h1>
               <div className="flex flex-col">
                 {latepost.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex border-[#7E7E7E] border-[1px] h-20 items-center"
-                  >
-                    <div className="bg-[#D9D9D9] w-12 h-12 ml-6"></div>
+                  <div key={index} className="flex border-[#7E7E7E] border-[1px] h-20 items-center">
+                    <img src={item.icon} className="w-12 h-12 ml-6" />
                     <div className="flex flex-col ml-3">
-                      <h5 className="font-Blinker font-normal text-[#828282] text-[13px]">
-                        {item.date}
-                      </h5>
-                      <h6 className="font-Blinker font-normal text-black text-[13px]">
-                        {item.title}
-                      </h6>
+                      <h5 className="font-Blinker font-normal text-[#828282] text-[13px]">{item.date}</h5>
+                      <Link to={item.path} className="cursor-pointer font-Blinker font-normal text-black text-[13px]">{item.title}</Link>
                     </div>
                   </div>
                 ))}

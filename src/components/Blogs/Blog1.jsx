@@ -1,10 +1,10 @@
 import Footer from "../Footer.jsx";
 import { FaRegCalendarAlt, FaTag } from "react-icons/fa";
-import author from "../../../public/assets/author.png";
-import arrow from "../../../public/assets/arrow.png"
-import start_busi_bg from "../../../public/assets/start_busi_bg.png";
-import serv_busi_bg from "../../../public/assets/serv_busi_bg.png";
-import pos_elem_bg from "../../../public/assets/pos_elem_bg.png";
+import author from "/assets/author.png";
+import arrow from "/assets/arrow.png"
+import start_busi_bg from "/assets/start_busi_bg.png";
+import serv_busi_bg from "/assets/serv_busi_bg.png";
+import pos_elem_bg from "/assets/pos_elem_bg.png";
 import { Link, useNavigate } from "react-router-dom"
 
 const Blog_section = () => {
@@ -34,21 +34,16 @@ const Blog_section = () => {
     },
     {
       id: 2,
-      title: "Corporate",
+      title: "Go To Market",
       page: "04",
     },
     {
       id: 3,
-      title: "IT Solutions",
+      title: " Growth Marketing",
       page: "01",
     },
     {
       id: 4,
-      title: "Marketing",
-      page: "01",
-    },
-    {
-      id: 5,
       title: "Startup Consulting",
       page: "05",
     },

@@ -1,7 +1,10 @@
 import Footer from "../Footer.jsx";
 import { FaRegCalendarAlt, FaTag } from "react-icons/fa";
-import author from "../../../public/assets/author.png"
+import author from "/assets/author.png"
 import { Link, useNavigate } from "react-router-dom"
+import start_busi_bg from "/assets/start_busi_bg.png";
+import serv_busi_bg from "/assets/serv_busi_bg.png";
+import pos_elem_bg from "/assets/pos_elem_bg.png";
 const Blog_section = () => {
     const navigate = useNavigate()
     const info = [
@@ -29,21 +32,16 @@ const Blog_section = () => {
         },
         {
             id: 2,
-            title: "Corporate",
+            title: "Go To Market",
             page: "04",
         },
         {
             id: 3,
-            title: "IT Solutions",
+            title: " Growth Marketing",
             page: "01",
         },
         {
             id: 4,
-            title: "Marketing",
-            page: "01",
-        },
-        {
-            id: 5,
             title: "Startup Consulting",
             page: "05",
         },
@@ -52,18 +50,24 @@ const Blog_section = () => {
     const latepost = [
         {
             id: 1,
-            date: "30 Oct 2024",
-            title: "5 Impactful Elements That",
+            date: "30 Sept 2024",
+            title: "Writing a Positioning Statement",
+            icon: pos_elem_bg,
+            path: '/blogs/How to Write a Positioning Statement'
         },
         {
             id: 2,
-            date: "30 Oct 2024",
-            title: "Revolutionizing The Future Of",
+            date: "7 Oct 2024",
+            title: "Starting a Business",
+            icon: start_busi_bg,
+            path: '/blogs/Starting a Business: How to Go Prepared'
         },
         {
             id: 3,
-            date: "30 Oct 2024",
-            title: "A Guide to Embrace",
+            date: "21 Sept 2024",
+            title: "Runing a Services Business",
+            icon: serv_busi_bg,
+            path: '/blogs/How to Run a Services Business Successfully'
         },
     ];
 
@@ -154,27 +158,26 @@ const Blog_section = () => {
         }
     ];
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center font-Blinker">
             <div className="bg-scale_growth_bg w-full xl:w-[99.2vw] bg-no-repeat bg-cover relative overflow-x-hidden flex flex-col justify-center items-center res-width2 max-sm:h-[430px] md:h-96">
                 {/* Intro */}
                 <div className="res-width3 flex flex-col justify-center items-start h-full">
-                    <h1 className="text-black font-Blinker text-4xl leading-10 font-normal md:w-[30rem] md:mr-[38rem] max-sm:ml-6">
+                    <h1 className="text-white font-Blinker text-4xl leading-10 font-normal md:w-[30rem] md:mr-[38rem] max-sm:ml-6">
                         Understanding the Difference Between Scale and Growth: <br />A Comprehensive Guide
                     </h1>
                 </div>
             </div>
-            <div className="bg-white flex max-md:flex-col justify-between res-width3 mt-[5rem] mb-52">
+            <div className="bg-white flex max-md:flex-col justify-between res-width3 max-sm:mt-6 md:mt-[5rem] mb-52">
                 {/* first div */}
                 <div className="flex flex-col items-center justify-center md:w-[70%]">
                     {/* Basic Info */}
-                    <div className="flex w-full flex-wrap gap-4 justify-between md:pr-[2rem] lg:pr-[4rem] md:pl-[0.2rem]">
+                    <div className="flex w-full max-sm:flex-col max-sm:grid max-sm:grid-cols-2 gap-4 justify-between md:pr-[2rem] lg:pr-[4rem] md:pl-[0.2rem]">
                         {info.map((item, index) => (
                             <div key={index} className="flex items-center gap-x-4">
                                 <div className="border-[#828282] h-12 w-12 rounded-full border-[1px] flex items-center justify-center max-sm:h-9 max-sm:w-9">
                                     {item.icon}
                                 </div>
-                                {/* Content to the right of the icon */}
-                                <h1 className="font-Blinker font-normal text-[#828282]">
+                                <h1 className="font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
                                     {item.content}
                                 </h1>
                             </div>
@@ -185,7 +188,7 @@ const Blog_section = () => {
                         <div className="bg-[#828282] h-[1px] w-full md:w-[90%] mt-3 mb-4"></div>
                     </div>
                     {/* Paragraphs */}
-                    <div className="flex flex-col gap-y-3 w-full">
+                    <div className="flex flex-col gap-y-3 w-full max-sm:w-[93%] max-sm:ml-2">
                         <p className="md:w-[92%] font-Blinker font-normal text-[#828282] max-sm:text-[14px]">
                             <p>In the realm of business, the terms <strong>scale</strong> and <strong>growth</strong> are often used interchangeably, but they represent fundamentally different concepts. Understanding the distinction between these two terms is crucial for entrepreneurs, business leaders, and investors alike. In this blog, we'll explore the definitions of scale and growth, their differences, and the implications for business strategy.</p>
 
@@ -193,7 +196,7 @@ const Blog_section = () => {
                     </div>
 
                     {/* Contents - 2 */}
-                    <div className="w-[100%] flex flex-col gap-y-2  mt-[20px] max-sm:text-[14px]">
+                    <div className="w-[100%] flex flex-col gap-y-2  mt-[20px] max-sm:text-[14px] max-sm:w-[93%] max-sm:ml-2">
                         {/* Defining Growth */}
                         <section className="md:w-[92%] flex flex-col md:text-[18px] mb-4">
                             <h2 className="font-bold md:text-3xl max-sm:text-[24px]">Defining Growth</h2>
@@ -271,7 +274,7 @@ const Blog_section = () => {
                             </div>
 
                             {/* Key Differences Between Scale and Growth */}
-                            <div className="flex flex-col md:text-[18px] max-sm:text-[12px]">
+                            <div className="flex flex-col md:text-[18px] max-sm:text-[12px] ">
                                 <h6 className="text-xl font-semibold mt-4">Key Differences Between Scale and Growth</h6>
                                 <div className="overflow-x-auto mt-4">
                                     <table className="min-w-full table-auto border-collapse border border-gray-300 ">
@@ -331,8 +334,8 @@ const Blog_section = () => {
                                 </p>
                                 {transitionSteps.map((item, index) => (
                                     <div key={index} className="mb-2 mt-2 max-sm:w-[335px]">
-                                        <h5 className="font-semibold mb-1 text-[18px]">{index + 1}. {item.title}</h5>
-                                        <p className="text-[#828282] font-Blinker font-normal ml-3 text-[18px]">{item.desc}</p>
+                                        <h5 className="font-semibold mb-1 text-[18px] max-sm:text-[14px]">{index + 1}. {item.title}</h5>
+                                        <p className="text-[#828282] font-Blinker font-normal ml-3 text-[18px] max-sm:text-[14px]">{item.desc}</p>
                                     </div>
                                 ))}
                             </div>
@@ -384,23 +387,14 @@ const Blog_section = () => {
 
                         {/* Latest post */}
                         <div className="flex flex-col md:mt-[65px] w-[20rem] md:w-[100%] max-sm:mt-6">
-                            <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">
-                                Latest Post
-                            </h1>
+                            <h1 className="text-white bg-black font-Blinker font-semibold pl-6 h-10 pt-2">Latest Post</h1>
                             <div className="flex flex-col">
                                 {latepost.map((item, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex border-[#7E7E7E] border-[1px] h-20 items-center"
-                                    >
-                                        <div className="bg-[#D9D9D9] w-12 h-12 ml-6"></div>
+                                    <div key={index} className="flex border-[#7E7E7E] border-[1px] h-20 items-center">
+                                        <img src={item.icon} className="w-12 h-12 ml-6" />
                                         <div className="flex flex-col ml-3">
-                                            <h5 className="font-Blinker font-normal text-[#828282] text-[13px]">
-                                                {item.date}
-                                            </h5>
-                                            <h6 className="font-Blinker font-normal text-black text-[13px]">
-                                                {item.title}
-                                            </h6>
+                                            <h5 className="font-Blinker font-normal text-[#828282] text-[13px]">{item.date}</h5>
+                                            <Link to={item.path} className="cursor-pointer font-Blinker font-normal text-black text-[13px]">{item.title}</Link>
                                         </div>
                                     </div>
                                 ))}
